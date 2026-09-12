@@ -1,50 +1,52 @@
 \section{Three connected research questions}
-Start from Intellectual Statement II. State the background, motivation, application, affected stakeholders, and strategic tension. Explain your proposal's relationship to a Nobel-recognized foundation and current research.
+In a 20-minute research-brief session, an Evidence Agent flags factual or citation issues, a Planning Agent flags deadline or sequencing risks, and an Idea Agent proposes writing options. They submit notifications but cannot interrupt directly. An Attention Coordinator must interrupt now, queue a message for the next five-minute checkpoint, or defer it to the minute-20 digest. The integrated question is how to combine current importance and urgency claims with task-specific historical reliability while preserving human oversight.
 
-\textbf{Q1---Economics:} [Which incentive, welfare, allocation, or institutional question needs an answer?]\par
-\textbf{Q2---Computation:} [Which model, algorithm, or evaluation makes the answer checkable?]\par
-\textbf{Q3---Behavior:} [Which belief, preference, reasoning limit, or learning mechanism could alter the prediction?]
+\textbf{Q1---Economics:} When does historical reliability improve allocation of scarce attention, and who bears the costs of false alarms, missed warnings, and interruptions?\par
+\textbf{Q2---Computation:} Can a transparent, reproducible history-calibrated scheduler reduce unnecessary interruptions without delaying too many important messages?\par
+\textbf{Q3---Behavior:} When users respond less to an agent, is the cause cognitive burden from repeated interruption or declining trust after repeated false alarms?
 
-Explain why the answers depend on one another. Cite relevant economics, computer-science, and behavioral-science papers. Refer to Figure~\ref{fig:teaser} and explain how its mechanism connects your questions.
+The scheduling rule allocates attention, changes agents' incentives and voice, and shapes burden and trust. Figure~\ref{fig:teaser} summarizes how current claims, historical reliability, and the three disciplinary questions connect to interruption authority.
 
-\section{Answer to Q1: incentives and intellectual lineage}
-State a provisional answer or falsifiable hypothesis. Define players, actions versus strategies, payoffs, timing, and information. Name the solution concept and cite its defining paper, such as Nash~\cite{nash1950} or Bayesian equilibrium~\cite{harsanyi1968}. State what the benchmark establishes and what it leaves unresolved. Distinguish hypothetical, observed, estimated, and inherited quantities.
+\section{Answer to the economics question}
+This proposed allocation problem draws intellectual lineage from incomplete-information games~\cite{harsanyi1968}; this PS1 does not solve a Nash or Bayesian equilibrium. The user, agents, and coordinator are players. Reports are actions; an agent's reporting policy is its strategy. The coordinator sees claims and task-matched history, not true message value. Welfare balances timely valid warnings against interruption, delay, and missed-warning costs. A future extension may model incentives to inflate claims, but the current heuristic neither solves nor demonstrates strategic misreporting.
 
-\section{Answer to Q2: method and evaluation}
-Explain the computational part of Figure~\ref{fig:teaser}: inputs, algorithm, baseline, metric, and a meaningful mathematical or computational check. Specify your smallest feasible experiment and one modification to the baseline. State the actual outputs obtained; label every untested outcome as expected or planned. Your Colab notebook and interactive game must explain the same research question and identify any differences in model or scope.
+Normalize importance $I$, urgency $U$, and reliability $R$ to $[0,1]$. The baseline is $N=0.5I+0.5U$ and $S=N$; the proposed score is $S=NR$. Multiplication is neither novel nor presumed optimal. The falsifiable hypothesis is that task-specific reliability helps when past validity predicts current validity, but harms welfare with sparse histories, domain shifts, or discounted rare-warning agents. Audits must report whose messages are delayed, not only attention saved. Nash~\cite{nash1950} provides intellectual lineage and a possible future benchmark, not a solved result here.
+
+\section{Answer to the computational question}
+Common thresholds will map either score to interrupt, checkpoint, or digest. $R$ will use labeled validity from matching task types, with smoothing for sparse histories. A synthetic simulation will vary validity, severity, arrival time, and agent history while comparing $S=N$, $S=NR$, and smoothed reliability.
+
+Metrics are unnecessary interruptions, important-message delay, warnings missed by minute 20, attention cost, and authority share by agent. Checks cover bounds, monotonicity, seeded runs, threshold edges, and Python--Colab--demo agreement. No project simulation, deployment, safety validation, or real-agent result is claimed. Calibration would fail if it saves attention mainly by suppressing valid warnings.
 
 \clearpage\balance
-\section{Answer to Q3: behavior and competing explanations}
-Identify a behavioral mechanism and a competing explanation. Describe evidence that would discriminate between them. Explain how this changes the economic model or computational design. State the limits of what the planned evidence can identify. Synthetic or simulated results do not establish human or real AI behavior. Include a feasible next test and what finding would change your mind.
+\section{Answer to the behavioral question}
+\emph{Burden} predicts disengagement after frequent valid interruptions; \emph{trust loss} predicts disengagement after false alarms at a fixed interruption rate. A future consented study could vary frequency while holding validity constant, then vary false-alarm history while holding frequency constant. Response, recall, completion, and perceived trust could distinguish them; no human-subject evidence exists.
 
+If burden dominates, batching or interruption budgets may outperform reputation. If trust loss dominates, explanations and reputation recovery matter more. Equal responses to reliable and unreliable agents would weaken the case for $R$. Tests must also detect self-reinforcing silence: fewer interruptions create fewer chances to demonstrate validity.
 
 \section{Advanced development and future directions}
-Build on a named Nobel laureate's defining work and cite the award record. Identify an enduring human question---such as cooperation, fairness, trust or collective choice---and explain what the foundation establishes. Add a relevant Turing Award foundation where it clarifies the computational lineage.
-
-Explain what is distinctive about today's environment and technology, what current research leaves unresolved, and how your proposal advances that boundary. State the economic, computational and behavioral contributions and the new insight their integration makes possible.
+Nobel laureates John Nash~\cite{nash1950} and John Harsanyi~\cite{harsanyi1968} clarify strategic interdependence and hidden information; an official award-record citation remains pending. They do not determine how specialized AI agents earn access to scarce human oversight. The contribution is a falsifiable framework joining allocation incentives, an auditable scheduler, and burden-versus-trust mechanisms. A Turing Award lineage remains pending source verification.
 
 \begin{table}[h]\caption{From laureate foundations to a new interdisciplinary contribution.}
 \begin{tabularx}{\columnwidth}{@{}p{1.6cm}Y@{}}\toprule
 \textbf{Horizon}&\textbf{Milestone and evidence}\\\midrule
-Foundation&[Laureate, defining work, enduring question and retained insight.]\\
-PS1&[Current-era setting, working baseline and meaningful check.]\\
-Next study&[New interdisciplinary explanation or design; a discriminating test.]\\
-Longer term&[Broader validation, benefits and reusable knowledge or tools.]\\
-2056&[Integrated contribution and evidence connecting it to the ambition below.]\\\bottomrule
+Foundation&Nash and Harsanyi: strategic choice under interdependence and incomplete information.\\
+PS1&Specify $S=N$ versus $S=NR$ and audit a reproducible synthetic 20-minute scenario.\\
+Next study&Compare schedulers and separate interruption burden from trust loss.\\
+Longer term&Test domain shifts, reputation recovery, oversight, and unequal voice.\\
+2056&Establish a falsifiable framework for accountable interruption authority.\\\bottomrule
 \end{tabularx}\end{table}
 
 \noindent\textbf{Expected 2056 Nobel Prize and Turing Award contribution statement.}
-By 2056, I aspire to be recognized for [theory, method or design] addressing [enduring human question] in [the current era's distinctive environment]. Building on [laureates and cited foundations], I will integrate [economics], [computer science] and [behavioral science] to advance [specific boundary]. Progress will be demonstrated by [milestones and evidence], with intellectual merits in [knowledge] and practical impacts for [people and institutions].
+By 2056, I aspire to contribute a falsifiable framework for allocating interruption authority among AI agents. I will integrate incentive analysis, transparent scheduling, and behavioral evidence about burden and trust. Progress requires reproducibility, cross-domain evidence, reputation recovery, and audits of missed warnings and unequal voice. This ambition neither declares $S=NR$ optimal nor predicts an award.
 
 \subsection*{Open Science Statement}
 \textbf{GitHub:} \GitHubLink\\
 \textbf{Google Colab:} \ColabLink\par
-[Identify available code, data or synthetic inputs, notebook, dependencies, outputs, release/commit and actual reuse terms. Give the shortest reproducible run instruction.]
+Planned materials are transparent scheduler code, documented synthetic inputs, tests, a notebook, and saved outputs tied to a verified commit. No project-specific release or computational result is claimed yet; links and fresh-run instructions will be added after verification.
 
 \subsection*{Statement of Contribution to the UN's SDGs}
 \textbf{Hugging Face:} \DemoLink\\
-Through an open-access [tool], this project aims to support \textbf{SDG 4---Quality Education}~\cite{sdg4} by helping [audience] learn [concept] through [interaction]. [State access needs, learning instructions and a feasible evaluation.] Distinguish the resource released from benefits that remain to be evaluated.
+The planned open-access simulator aims to support \textbf{SDG 4---Quality Education}~\cite{sdg4} by helping students compare current-claim-only and history-calibrated attention rules in an interactive scenario. Its accessibility, instructions, and learning evaluation remain to be developed; no educational benefit is claimed yet.
 
 \subsection*{Submission milestones}
 First draft: September 13, 2026, 11:00 P.M. Beijing time (UTC+8). Class review: September 14. Proposed: rebuttal September 16 and revised submission September 20, both at 11:00 P.M. Update Appendix~\ref{app:abstract} with each reflection and revision.
-

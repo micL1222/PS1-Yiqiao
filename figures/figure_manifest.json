@@ -1,8 +1,20 @@
 {
-  "iconography_mode": "minimal-scientific",
-  "reader_task": "framing",
-  "caption_evidence_class": "prospective",
+  "title": "Who Gets to Interrupt? Reputation-Calibrated Deference in Multi-Agent AI",
+  "concept_owner": "Yiqiao Liu",
+  "iconography_mode": "compact-academic-process-flow",
+  "reader_task": "mechanism",
+  "caption_evidence_class": "proposed heuristic",
   "editable_master": "ps1_teaser.drawio",
+  "exports": [
+    "ps1_teaser.pdf",
+    "ps1_teaser.svg",
+    "ps1_teaser.png"
+  ],
+  "canvas": {
+    "width": 1000,
+    "height": 190,
+    "purpose": "compact horizontal ACM teaser"
+  },
   "palette": {
     "ink": "#18324A",
     "surface": "#FFFFFF",
@@ -13,52 +25,63 @@
   },
   "semantic_graphics": [
     {
-      "concept": "Economic incentives",
-      "visual_encoding": "Native symbolic payoff matrix",
+      "concept": "Specialized candidate-message sources",
+      "visual_encoding": "Three editable agent cards for evidence, planning, and ideas",
       "shape_ids": [
-        "matrix",
-        "payoff0"
+        "evidence-agent",
+        "planning-agent",
+        "idea-agent"
       ],
-      "origin": "original vector composition adapting the user-supplied class figure",
-      "evidence_implication": "Symbolic game; no measured payoff"
+      "origin": "Yiqiao Liu's research scenario",
+      "evidence_implication": "Conceptual roles; no observed agent behavior"
     },
     {
-      "concept": "Recursive reasoning",
-      "visual_encoding": "Three connected belief levels",
+      "concept": "Current claims and task-specific history",
+      "visual_encoding": "Importance and urgency inputs are visually separated from historical reliability",
       "shape_ids": [
-        "belief0",
-        "belief1",
-        "recursive0"
+        "importance-input",
+        "urgency-input",
+        "reliability-input"
       ],
-      "origin": "original",
-      "evidence_implication": "Conceptual depth; no measured cognition"
+      "origin": "Yiqiao Liu's proposed mechanism",
+      "evidence_implication": "Inputs are defined constructs, not measured performance"
     },
     {
-      "concept": "Persona context",
-      "visual_encoding": "Two abstract human figures joined by a context comparison",
+      "concept": "Baseline and reputation-calibrated policies",
+      "visual_encoding": "Side-by-side editable score boxes: S=N and proposed S=N×R",
       "shape_ids": [
-        "head718",
-        "shoulders718",
-        "head818",
-        "context-link"
+        "current-claims",
+        "baseline-policy",
+        "calibrated-policy",
+        "heuristic-note"
       ],
-      "origin": "original",
-      "evidence_implication": "Prompt attributes; no photographed participants"
+      "origin": "Yiqiao Liu's proposed comparison",
+      "evidence_implication": "Transparent heuristic; not claimed optimal or validated"
     },
     {
-      "concept": "Proposed synthesis",
-      "visual_encoding": "Three dashed paths converge on a shared evaluation",
+      "concept": "Coordinator decision",
+      "visual_encoding": "Three possible delivery actions",
       "shape_ids": [
-        "synthesis0",
-        "synthesis1",
-        "synthesis2",
-        "evaluation"
+        "interrupt-action",
+        "queue-action",
+        "digest-action"
       ],
-      "origin": "user-supplied class proposal; original geometry",
-      "evidence_implication": "Planned integration, not a causal finding"
+      "origin": "Yiqiao Liu's fixed 20-minute scenario",
+      "evidence_implication": "Decision alternatives; no empirical outcome"
+    },
+    {
+      "concept": "Interdisciplinary audit",
+      "visual_encoding": "Compact bottom band for economics, computer science, and behavioral science",
+      "shape_ids": [
+        "economics-band",
+        "cs-band",
+        "behavior-band"
+      ],
+      "origin": "Course-required interdisciplinary framing applied to Yiqiao Liu's idea",
+      "evidence_implication": "Research questions, not results"
     }
   ],
-  "composition_mechanism": "Three disciplinary foundations converge on the same evaluation",
-  "raster_disclosure": "No raster images; every element is native editable geometry and live text.",
-  "grayscale_encoding": "Titles, symbolic geometry and dashed synthesis arrows retain the meaning without color."
+  "composition_mechanism": "Specialized agents submit candidate messages; the coordinator combines current claims with task-specific historical reliability and selects interrupt, checkpoint queue, or digest.",
+  "raster_disclosure": "The Draw.io master uses native editable text, shapes, and connectors. The PNG is an export only.",
+  "grayscale_encoding": "Labels, borders, ordering, and explicit policy text preserve meaning without color."
 }
