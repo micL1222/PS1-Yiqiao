@@ -1,8 +1,8 @@
 ---
 title: Who Gets to Interrupt
 emoji: 🔔
-colorFrom: teal
-colorTo: blue
+colorFrom: blue
+colorTo: indigo
 sdk: static
 app_file: index.html
 pinned: false
