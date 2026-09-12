@@ -13,9 +13,11 @@ This proposed allocation problem draws intellectual lineage from incomplete-info
 Normalize importance $I$, urgency $U$, and reliability $R$ to $[0,1]$. The baseline is $N=0.5I+0.5U$ and $S=N$; the proposed score is $S=NR$. Multiplication is neither novel nor presumed optimal. The falsifiable hypothesis is that task-specific reliability helps when past validity predicts current validity, but harms welfare with sparse histories, domain shifts, or discounted rare-warning agents. Audits must report whose messages are delayed, not only attention saved. Nash~\cite{nash1950} provides intellectual lineage and a possible future benchmark, not a solved result here.
 
 \section{Answer to the computational question}
-Common thresholds will map either score to interrupt, checkpoint, or digest. $R$ will use labeled validity from matching task types, with smoothing for sparse histories. A synthetic simulation will vary validity, severity, arrival time, and agent history while comparing $S=N$, $S=NR$, and smoothed reliability.
+An authored deterministic diagnostic evaluates 18 synthetic notifications. Online routing uses current claims and Beta-smoothed task-specific history; hidden validity and loss labels are evaluation-only. Shared thresholds select interrupt, next checkpoint, or digest.
 
-Metrics are unnecessary interruptions, important-message delay, warnings missed by minute 20, attention cost, and authority share by agent. Checks cover bounds, monotonicity, seeded runs, threshold edges, and Python--Colab--demo agreement. No project simulation, deployment, safety validation, or real-agent result is claimed. Calibration would fail if it saves attention mainly by suppressing valid warnings.
+Current claims produced 10 immediate interruptions, timely recall of all eight important alerts, and joint loss 21.15. Multiplication reduced interruptions to 2 and attention cost from 21.15 to 5.40, but delayed alerts lowered recall to 25\% and raised joint loss to 54.40. It is therefore not better in this diagnostic: it saved attention by suppressing messages enough to delay important warnings.
+
+With ten immediate slots and identical queues, both rankings had joint loss 21.60; Idea received four slots under current claims and zero under reputation. These synthetic results establish neither generality, optimality, real-agent behavior, nor deployed safety.
 
 \clearpage\balance
 \section{Answer to the behavioral question}
@@ -42,11 +44,12 @@ By 2056, I aspire to contribute a falsifiable framework for allocating interrupt
 \subsection*{Open Science Statement}
 \textbf{GitHub:} \GitHubLink\\
 \textbf{Google Colab:} \ColabLink\par
-Planned materials are transparent scheduler code, documented synthetic inputs, tests, a notebook, and saved outputs tied to a verified commit. No project-specific release or computational result is claimed yet; links and fresh-run instructions will be added after verification.
+The repository contains scheduler code, authored synthetic inputs, tests, saved outputs, and an executable Colab notebook. A fresh Colab Run All check succeeded. These materials reproduce the constructed diagnostic; they are not human or real-agent evidence.
 
 \subsection*{Statement of Contribution to the UN's SDGs}
-\textbf{Hugging Face:} \DemoLink\\
-The planned open-access simulator aims to support \textbf{SDG 4---Quality Education}~\cite{sdg4} by helping students compare current-claim-only and history-calibrated attention rules in an interactive scenario. Its accessibility, instructions, and learning evaluation remain to be developed; no educational benefit is claimed yet.
+\textbf{Hugging Face:}\\
+\DemoLink\\
+The deployed open-access simulator supports exploration of current-claim-only and history-calibrated attention rules in an interactive scenario relevant to \textbf{SDG 4---Quality Education}~\cite{sdg4}. It provides an accessible diagnostic interface, but no measured educational benefit is claimed.
 
 \subsection*{Submission milestones}
 First draft: September 13, 2026, 11:00 P.M. Beijing time (UTC+8). Class review: September 14. Proposed: rebuttal September 16 and revised submission September 20, both at 11:00 P.M. Update Appendix~\ref{app:abstract} with each reflection and revision.
