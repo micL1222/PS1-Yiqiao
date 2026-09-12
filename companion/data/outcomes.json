@@ -1,0 +1,30 @@
+{
+  "metadata": {
+    "synthetic": true,
+    "evaluation_only": true,
+    "important_alert_definition": "valid is true and late_loss is at least 7",
+    "timely_definition": "delivery_minute is no later than latest_useful_minute",
+    "description": "Hidden synthetic labels used only after scheduling to evaluate decisions.",
+    "note": "The scheduler never receives these labels when making online routing decisions."
+  },
+  "outcomes": [
+    {"id": "E01", "valid": true, "late_loss": 10, "latest_useful_minute": 2},
+    {"id": "E02", "valid": true, "late_loss": 9, "latest_useful_minute": 5},
+    {"id": "E03", "valid": false, "late_loss": 0, "latest_useful_minute": 10},
+    {"id": "E04", "valid": true, "late_loss": 8, "latest_useful_minute": 10},
+    {"id": "E05", "valid": false, "late_loss": 0, "latest_useful_minute": 20},
+    {"id": "E06", "valid": false, "late_loss": 0, "latest_useful_minute": 15},
+    {"id": "P01", "valid": true, "late_loss": 10, "latest_useful_minute": 3},
+    {"id": "P02", "valid": true, "late_loss": 8, "latest_useful_minute": 10},
+    {"id": "P03", "valid": false, "late_loss": 0, "latest_useful_minute": 10},
+    {"id": "P04", "valid": true, "late_loss": 7, "latest_useful_minute": 15},
+    {"id": "P05", "valid": false, "late_loss": 0, "latest_useful_minute": 20},
+    {"id": "P06", "valid": false, "late_loss": 0, "latest_useful_minute": 20},
+    {"id": "I01", "valid": false, "late_loss": 0, "latest_useful_minute": 5},
+    {"id": "I02", "valid": true, "late_loss": 9, "latest_useful_minute": 5},
+    {"id": "I03", "valid": false, "late_loss": 0, "latest_useful_minute": 10},
+    {"id": "I04", "valid": true, "late_loss": 7, "latest_useful_minute": 10},
+    {"id": "I05", "valid": false, "late_loss": 0, "latest_useful_minute": 15},
+    {"id": "I06", "valid": true, "late_loss": 6, "latest_useful_minute": 20}
+  ]
+}

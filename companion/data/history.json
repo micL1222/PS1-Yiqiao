@@ -1,0 +1,31 @@
+{
+  "metadata": {
+    "synthetic": true,
+    "description": "Task-specific audited history constructed for diagnostic evaluation of the interruption-authority scheduler.",
+    "beta_prior": {
+      "valid": 1,
+      "invalid": 1
+    },
+    "note": "These counts are synthetic inputs, not observations of people, deployed systems, or real LLM agents."
+  },
+  "history": [
+    {
+      "agent": "Evidence",
+      "task_type": "evidence_check",
+      "valid_count": 17,
+      "audited_count": 18
+    },
+    {
+      "agent": "Planning",
+      "task_type": "planning_risk",
+      "valid_count": 9,
+      "audited_count": 18
+    },
+    {
+      "agent": "Idea",
+      "task_type": "idea_suggestion",
+      "valid_count": 3,
+      "audited_count": 18
+    }
+  ]
+}

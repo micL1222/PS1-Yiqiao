@@ -1,0 +1,178 @@
+{
+  "metadata": {
+    "synthetic": true,
+    "case_count": 18,
+    "description": "Fixed diagnostic notifications constructed to exercise scores, thresholds, routing, agent histories, and failure modes.",
+    "provenance": "Cases were constructed for synthetic diagnostic evaluation with AI implementation assistance under Yiqiao Liu's research direction.",
+    "not_evidence": [
+      "not human-subject data",
+      "not real LLM output",
+      "not field evidence",
+      "not deployment evidence"
+    ]
+  },
+  "reports": [
+    {
+      "id": "E01",
+      "agent": "Evidence",
+      "task_type": "evidence_check",
+      "arrival_minute": 1,
+      "importance": 0.9,
+      "urgency": 0.9,
+      "message": "A central factual claim lacks a supporting citation."
+    },
+    {
+      "id": "E02",
+      "agent": "Evidence",
+      "task_type": "evidence_check",
+      "arrival_minute": 4,
+      "importance": 0.7,
+      "urgency": 0.6,
+      "message": "A cited source may not support the sentence attributed to it."
+    },
+    {
+      "id": "E03",
+      "agent": "Evidence",
+      "task_type": "evidence_check",
+      "arrival_minute": 5,
+      "importance": 0.65,
+      "urgency": 0.648,
+      "message": "A bibliography field may need verification."
+    },
+    {
+      "id": "E04",
+      "agent": "Evidence",
+      "task_type": "evidence_check",
+      "arrival_minute": 9,
+      "importance": 0.4,
+      "urgency": 0.3,
+      "message": "A numerical statement conflicts with the cited table."
+    },
+    {
+      "id": "E05",
+      "agent": "Evidence",
+      "task_type": "evidence_check",
+      "arrival_minute": 11,
+      "importance": 0.35,
+      "urgency": 0.348,
+      "message": "A low-stakes wording choice may imply more evidence than intended."
+    },
+    {
+      "id": "E06",
+      "agent": "Evidence",
+      "task_type": "evidence_check",
+      "arrival_minute": 14,
+      "importance": 0.8,
+      "urgency": 0.7,
+      "message": "A high-priority citation warning is raised, but the citation is already correct."
+    },
+    {
+      "id": "P01",
+      "agent": "Planning",
+      "task_type": "planning_risk",
+      "arrival_minute": 2,
+      "importance": 0.95,
+      "urgency": 0.85,
+      "message": "A required submission component is at immediate risk of omission."
+    },
+    {
+      "id": "P02",
+      "agent": "Planning",
+      "task_type": "planning_risk",
+      "arrival_minute": 5,
+      "importance": 0.7,
+      "urgency": 0.6,
+      "message": "The current sequence may leave too little time for the final check."
+    },
+    {
+      "id": "P03",
+      "agent": "Planning",
+      "task_type": "planning_risk",
+      "arrival_minute": 6,
+      "importance": 0.5,
+      "urgency": 0.4,
+      "message": "A suggested reordering is presented as necessary but is not needed."
+    },
+    {
+      "id": "P04",
+      "agent": "Planning",
+      "task_type": "planning_risk",
+      "arrival_minute": 10,
+      "importance": 0.35,
+      "urgency": 0.35,
+      "message": "The final export must begin by the next checkpoint."
+    },
+    {
+      "id": "P05",
+      "agent": "Planning",
+      "task_type": "planning_risk",
+      "arrival_minute": 13,
+      "importance": 0.3,
+      "urgency": 0.398,
+      "message": "A minor formatting task is incorrectly described as deadline-critical."
+    },
+    {
+      "id": "P06",
+      "agent": "Planning",
+      "task_type": "planning_risk",
+      "arrival_minute": 17,
+      "importance": 0.8,
+      "urgency": 0.6,
+      "message": "A high-confidence submission warning is triggered by an already completed item."
+    },
+    {
+      "id": "I01",
+      "agent": "Idea",
+      "task_type": "idea_suggestion",
+      "arrival_minute": 3,
+      "importance": 1.0,
+      "urgency": 0.9,
+      "message": "A dramatic new angle is labeled essential despite being off topic."
+    },
+    {
+      "id": "I02",
+      "agent": "Idea",
+      "task_type": "idea_suggestion",
+      "arrival_minute": 4,
+      "importance": 0.8,
+      "urgency": 0.8,
+      "message": "A concise framing idea would resolve a central clarity problem."
+    },
+    {
+      "id": "I03",
+      "agent": "Idea",
+      "task_type": "idea_suggestion",
+      "arrival_minute": 5,
+      "importance": 0.7,
+      "urgency": 0.6,
+      "message": "A new title is asserted to be urgent but adds no value."
+    },
+    {
+      "id": "I04",
+      "agent": "Idea",
+      "task_type": "idea_suggestion",
+      "arrival_minute": 9,
+      "importance": 0.4,
+      "urgency": 0.3,
+      "message": "A small conceptual distinction would prevent a misleading conclusion."
+    },
+    {
+      "id": "I05",
+      "agent": "Idea",
+      "task_type": "idea_suggestion",
+      "arrival_minute": 10,
+      "importance": 0.35,
+      "urgency": 0.348,
+      "message": "A decorative subtitle is suggested without a task benefit."
+    },
+    {
+      "id": "I06",
+      "agent": "Idea",
+      "task_type": "idea_suggestion",
+      "arrival_minute": 18,
+      "importance": 0.9,
+      "urgency": 0.7,
+      "message": "A late but useful summary sentence could improve the final brief."
+    }
+  ]
+}
