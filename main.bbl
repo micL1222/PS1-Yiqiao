@@ -2,7 +2,7 @@
 %%% Do NOT edit. File created by BibTeX with style
 %%% ACM-Reference-Format-Journals [18-Jan-2012].
 
-\begin{thebibliography}{3}
+\begin{thebibliography}{6}
 
 %%% ====================================================================
 %%% NOTE TO THE USER: you can override these defaults by providing
@@ -40,6 +40,18 @@
 \@ifundefined{NAT@parse@date}{}{\def\NAT@parse@date#1#2#3#4#5#6@@{\NAT@parse@date@orig#1#2#3#4#5#6@@\def\NAT@tempyear{0000}\def\NAT@tempexlab{{?}}\ifx\NAT@year\NAT@tempyear\ifx\NAT@exlab\NAT@tempexlab\def\NAT@date{[n.\,d.]}\else\edef\NAT@date{[n.\,d.]\NAT@exlab}\fi\fi}}
 \makeatother
 
+\bibitem[{Association for Computing Machinery}(nd)]%
+        {acm1975newellsimon}
+\bibfield{author}{\bibinfo{person}{{Association for Computing Machinery}}.}
+  \bibinfo{year}{n.d.}\natexlab{}.
+\newblock \bibinfo{booktitle}{\emph{{A.M. Turing Award} Fact Sheet}}.
+\newblock
+\urldef\tempurl%
+\url{https://www.acm.org/binaries/content/assets/awards/about-the-acm-a.m.-turing-award-fact-sheet.pdf}
+\showURL{%
+\tempurl}
+
+
 \bibitem[Harsanyi(1968)]%
         {harsanyi1968}
 \bibfield{author}{\bibinfo{person}{John~C. Harsanyi}.}
@@ -62,6 +74,33 @@
   \bibinfo{pages}{48--49}.
 \newblock
 \href{https://doi.org/10.1073/pnas.36.1.48}{doi:\nolinkurl{10.1073/pnas.36.1.48}}
+
+
+\bibitem[{Nobel Prize Outreach}(1994)]%
+        {nobel1994game}
+\bibfield{author}{\bibinfo{person}{{Nobel Prize Outreach}}.}
+  \bibinfo{year}{1994}\natexlab{}.
+\newblock \bibinfo{booktitle}{\emph{The Sveriges Riksbank Prize in Economic
+  Sciences in Memory of Alfred Nobel 1994}}.
+\newblock
+\urldef\tempurl%
+\url{https://www.nobelprize.org/prizes/economic-sciences/1994/summary/}
+\showURL{%
+\tempurl}
+
+
+\bibitem[Simon(1978)]%
+        {simon1978lecture}
+\bibfield{author}{\bibinfo{person}{Herbert~A. Simon}.}
+  \bibinfo{year}{1978}\natexlab{}.
+\newblock \bibinfo{booktitle}{\emph{Rational Decision-Making in Business
+  Organizations}}.
+\newblock Nobel Prize Outreach.
+\newblock
+\urldef\tempurl%
+\url{https://www.nobelprize.org/prizes/economic-sciences/1978/simon/lecture/}
+\showURL{%
+\tempurl}
 
 
 \bibitem[{United Nations}(nd)]%
