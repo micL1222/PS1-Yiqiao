@@ -1,0 +1,28 @@
+# macOS
+.DS_Store
+
+# Python environments and bytecode
+__pycache__/
+*.pyc
+.venv/
+venv/
+env/
+
+# Jupyter transient state
+.ipynb_checkpoints/
+
+# LaTeX build artifacts
+*.aux
+*.log
+*.out
+*.toc
+*.synctex.gz
+*.fls
+*.fdb_latexmk
+
+# Editor state and temporary files
+.idea/
+.vscode/
+*.swp
+*.swo
+*~

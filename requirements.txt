@@ -1,0 +1,5 @@
+numpy
+nashpy
+pandas
+matplotlib
+jupyter
