@@ -1,6 +1,6 @@
 # Working Research Model
 
-This document records the author's theoretical model. It does not report computational verification or observed behavior.
+This document preserves the author's initial theoretical model and records subsequent computational verification separately. It does not report observed behavior.
 
 ## Players, actions, and parameters
 
@@ -25,12 +25,20 @@ Payoffs are ordered (Agent A, Agent B):
 
 If the other agent researches, Skip yields V while Research yields V − c. Thus, for **c > 0**, Skip is preferred. If the other agent skips, Research yields V − c while Skip yields 0. Thus, for **0 < c < V**, Research is preferred.
 
-Therefore, for **0 < c < V**, the **theoretically predicted** pure-strategy Nash equilibria are **(R, S)** and **(S, R)**. For baseline V = 4 and c = 2, these remain theoretical predictions awaiting NashPy verification.
+Therefore, for **0 < c < V**, the author initially **theoretically predicted** the pure-strategy Nash equilibria **(R, S)** and **(S, R)**. For baseline V = 4 and c = 2, these were the initial verification targets; the results of the later code run are recorded below.
 
 ## Theoretical boundary expectations
 
 - If **c > V**, research is individually unattractive when the other skips, so **(S, S)** is expected to become an equilibrium.
-- If **c = V**, indifference creates a boundary case requiring explicit analysis and later computational verification.
+- If **c = V**, indifference creates a boundary case. The later discrete computational check is recorded below; its finite support-enumeration output does not characterize every possible mixed profile.
 - **c < 0** is not economically meaningful under the current interpretation; later implementation should treat it as invalid input unless the model is explicitly redefined.
 
-No NashPy computation, parameter sweep, or simulation has been run for this project.
+## Computational Verification
+
+The implemented matrices for V = 4, c = 2 are Agent A `[[2, 2], [4, 0]]` and Agent B `[[2, 4], [2, 0]]`. The independent four-profile best-response checker and NashPy support enumeration both returned the author's initially predicted **pure** equilibria (R, S) and (S, R).
+
+NashPy also returned a **mixed** equilibrium with Agent A = [0.5, 0.5] and Agent B = [0.5, 0.5], in [Research, Skip] order. The initial reasoning had identified only the two pure equilibria. After the NashPy result, let p be the other agent’s probability of Research. Research gives V - c, while Skip gives pV. Indifference gives `p(Research) = (V - c)/V = 1 - c/V = 0.5`, agreeing with the returned probabilities. This formula applies for 0 < c < V and does not fully characterize degenerate boundaries.
+
+With V = 4 fixed, the computational sweep checked c = 0, 1, 2, 3, 4, 5. The two methods agreed on every **pure** equilibrium set. The interior mixed probabilities were 0.75, 0.5, and 0.25 for c = 1, 2, and 3, respectively, and agreed with the formula. At c = 0 the pure equilibria are (R, R), (R, S), (S, R); at c = V = 4 they are (R, S), (S, R), (S, S); at c = 5 only (S, S) is pure. Boundary support-enumeration output is finite and is not a complete claim about any mixed-equilibrium continuum. See `../outputs/verification_summary.md` and the machine-readable outputs for the executed results.
+
+These formal equilibrium calculations provide no observed LLM or human behavior evidence.

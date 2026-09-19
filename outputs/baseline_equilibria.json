@@ -1,0 +1,109 @@
+{
+  "description": "Computed baseline equilibria; not behavioral observations",
+  "environment": {
+    "Python": "3.9.6",
+    "numpy": "2.0.2",
+    "nashpy": "0.0.41",
+    "pandas": "2.3.3",
+    "matplotlib": "3.9.4"
+  },
+  "baseline": {
+    "parameters": {
+      "V": 4,
+      "c": 2
+    },
+    "relation_to_V": "interior",
+    "action_order": [
+      "Research",
+      "Skip"
+    ],
+    "agent_a_payoffs": [
+      [
+        2.0,
+        2.0
+      ],
+      [
+        4.0,
+        0.0
+      ]
+    ],
+    "agent_b_payoffs": [
+      [
+        2.0,
+        4.0
+      ],
+      [
+        2.0,
+        0.0
+      ]
+    ],
+    "independent_pure_equilibria": [
+      [
+        "Research",
+        "Skip"
+      ],
+      [
+        "Skip",
+        "Research"
+      ]
+    ],
+    "nashpy_support_enumeration": [
+      {
+        "agent_a": [
+          1.0,
+          0.0
+        ],
+        "agent_b": [
+          0.0,
+          1.0
+        ],
+        "classification": "pure",
+        "pure_profile": [
+          "Research",
+          "Skip"
+        ]
+      },
+      {
+        "agent_a": [
+          0.0,
+          1.0
+        ],
+        "agent_b": [
+          1.0,
+          0.0
+        ],
+        "classification": "pure",
+        "pure_profile": [
+          "Skip",
+          "Research"
+        ]
+      },
+      {
+        "agent_a": [
+          0.5,
+          0.5
+        ],
+        "agent_b": [
+          0.5,
+          0.5
+        ],
+        "classification": "mixed",
+        "pure_profile": null
+      }
+    ],
+    "nashpy_warnings": [],
+    "number_of_pure_equilibria": 2,
+    "pure_methods_agree": true,
+    "interior_analytical_mixed_applies": true,
+    "analytical_p_research": 0.5,
+    "nashpy_mixed_p_research": {
+      "agent_a": 0.5,
+      "agent_b": 0.5
+    },
+    "analytical_and_nashpy_mixed_agree": true
+  },
+  "verification_checks": {
+    "baseline_payoff_matrices": true,
+    "predicted_pure_equilibria": true
+  }
+}

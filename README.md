@@ -6,7 +6,7 @@
 
 This repository is the clean v2 workspace for a revised COMSCI/ECON 206 PS1 research proposal.
 
-**Current status:** Project initialized; theoretical baseline specified; computational verification not yet run.
+**Current status:** Formal baseline implemented and computationally verified; the six-case research-cost sweep and executable notebook are complete. Behavioral questions remain untested.
 
 ## Research Question
 
@@ -27,11 +27,13 @@ Agents A and B each choose **Research (R)** or **Skip (S)**. If either agent res
 | **Research (R)** | (2, 2) | (2, 4) |
 | **Skip (S)** | (4, 2) | (0, 0) |
 
-The **theoretically predicted** pure-strategy Nash equilibria are **(Research, Skip)** and **(Skip, Research)**. These are theoretical predictions awaiting computational verification, not verified NashPy results.
+The author initially **theoretically predicted** the pure-strategy Nash equilibria **(Research, Skip)** and **(Skip, Research)**. The independent best-response checker and NashPy subsequently verified both for V = 4, c = 2.
 
-## Planned Computational Baseline
+## Verified Computational Baseline
 
-The next implementation step is to encode the game, verify the baseline with NashPy, test boundary and parameter cases, preserve actual outputs, and create a reproducible notebook. None of these steps has been completed yet.
+For V = 4 and c = 2, the executed code generated Agent A payoffs `[[2, 2], [4, 0]]` and Agent B payoffs `[[2, 4], [2, 0]]`. Direct best-response enumeration and NashPy both returned the two initially predicted pure equilibria. NashPy additionally returned the symmetric mixed equilibrium **A = [0.5, 0.5], B = [0.5, 0.5]** in [Research, Skip] order. The later analytical cross-check, `p(Research) = 1 - c/V`, agrees at 0.5 for each player.
+
+The cost sweep holds V = 4 and checks c = 0 through 5. See `outputs/verification_summary.md` for the generated results and boundary cautions. These calculations describe the formal game; they are not observations of real AI or human behavior.
 
 ## Repository Structure
 
@@ -47,7 +49,9 @@ The next implementation step is to encode the game, verify the baseline with Nas
 
 ## Reproducibility
 
-Reproducibility instructions and exact tested dependency versions will be added after the first verified run. The planned Python dependencies are listed in `requirements.txt`; they have not yet been used to run the baseline.
+From the project root, create the local environment and install the declared dependencies with `python3 -m venv .venv` and `.venv/bin/python -m pip install -r requirements.txt`. The tested environment was Python 3.9.6, numpy 2.0.2, nashpy 0.0.41, pandas 2.3.3, and matplotlib 3.9.4; `requirements.txt` remains unpinned.
+
+Run the automated tests with `.venv/bin/python -m unittest discover -s tests -v`, and regenerate the baseline and cost-sweep outputs with `.venv/bin/python -m src.run_baseline_analysis`. The executed notebook is `notebooks/information_acquisition_baseline.ipynb`; it imports the same reusable source implementation. Exact tested versions and generated outputs are also recorded in `outputs/verification_summary.md` and `outputs/baseline_equilibria.json`.
 
 ## AI Assistance
 

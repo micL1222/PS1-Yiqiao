@@ -5,7 +5,7 @@
 - **Course:** COMSCI/ECON 206 Computational Microeconomics, Autumn 2026 Session 1.
 - **Project:** Revised PS1 v2 research proposal, developed individually.
 - **Working title:** Who Pays to Know? Strategic Information Acquisition Before AI Collective Decisions.
-- **Status:** Clean project initialized. The model and equilibrium statements below are theoretical. No computational or behavioral verification has been run.
+- **Status:** Formal Python implementation, automated tests, six-case cost sweep, saved computational outputs, and a freshly executed notebook exist. The baseline equilibrium claims below were computationally verified; no behavioral verification has been run.
 - **Authorship:** The author independently developed the research question and strategic model. AI assistance is limited to implementation, debugging, project organization, drafting assistance, reproducibility checks, and technical verification after that reasoning.
 
 ## Motivation and formal baseline
@@ -26,7 +26,7 @@ Payoffs are ordered (Agent A, Agent B):
 | **Research (R)** | (2, 2) | (2, 4) |
 | **Skip (S)** | (4, 2) | (0, 0) |
 
-The author's **theoretical predictions**, awaiting NashPy verification, are the pure-strategy Nash equilibria **(R, S)** and **(S, R)** for the baseline. These follow from the expected incentives to skip when the other researches and to research when the other skips, given 0 < c < V.
+The author's initial **theoretical predictions** were the pure-strategy Nash equilibria **(R, S)** and **(S, R)** for the baseline. They follow from incentives to skip when the other researches and to research when the other skips, given 0 < c < V. Direct best-response enumeration and NashPy have now verified both. NashPy additionally returned a symmetric mixed equilibrium with A = [0.5, 0.5] and B = [0.5, 0.5] in [Research, Skip] order; an analytical calculation made after that result agrees.
 
 ## Working research questions
 
@@ -37,19 +37,18 @@ The author's **theoretical predictions**, awaiting NashPy verification, are the 
 
 ## Evidence status
 
-Only the theoretical game definition, manual equilibrium predictions, and planned computational verification exist. There is no verified NashPy output, synthetic or simulated result, observed LLM or human behavior, or validated educational outcome. Distinguish **theoretical prediction**, **computationally verified result**, **synthetic or simulated result**, **observed LLM behavior**, **observed human behavior**, **expected result**, and **planned future test** in all future work. See `docs/evidence_status.md`.
+The theoretical model, computational verification, executed notebook, and generated JSON/CSV/Markdown outputs now exist. The baseline has two verified pure equilibria and one verified interior mixed equilibrium; the discrete V = 4 cost sweep checks c = 0 through 5. There is still no synthetic or simulated agent-behavior result, observed LLM or human behavior, or validated educational outcome. Distinguish **theoretical prediction**, **computationally verified result**, **synthetic or simulated result**, **observed LLM behavior**, **observed human behavior**, **expected result**, and **planned future test** in all future work. See `docs/evidence_status.md`.
 
-## Planned near-term workflow
+## Workflow state
 
-1. Implement the formal game.
-2. Verify the baseline using NashPy.
-3. Run a meaningful parameter modification.
-4. Create a reproducible notebook.
-5. Build a teaser figure.
-6. Integrate verified results into the paper.
-7. Build or revise a Hugging Face educational demo.
+1. **Completed:** Implement the formal game in `src/information_acquisition_game.py`.
+2. **Completed:** Verify the baseline using NashPy and an independent pure best-response checker.
+3. **Completed:** Check V = 4 at c = 0, 1, 2, 3, 4, 5.
+4. **Completed:** Create and execute `notebooks/information_acquisition_baseline.ipynb`; save actual outputs in `outputs/`.
+5. **Next likely stage, not started:** Design the research teaser and integrate the verified baseline into the PS1 paper.
+6. **Later, not started:** Build or revise a Hugging Face educational demo.
 
-These steps are plans, not completed work.
+The code uses [Research, Skip] action order. Boundary c = 0 and c = V cases are degenerate; direct enumeration lists all pure equilibria, while finite support enumeration does not establish a complete boundary mixed-equilibrium correspondence.
 
 ## Constraints for future work
 
@@ -57,4 +56,4 @@ These steps are plans, not completed work.
 - Do not edit Human-Only peer reviews.
 - Preserve reproducibility and keep paper, notebook, demo, and figures aligned to the same research model.
 - Do not modify old PS1 v1 materials unless explicitly instructed.
-- Do not treat this initialization as authorization to write the final paper or implement the game.
+- Do not treat computational verification as authorization to write the final paper, publish an artifact, or make behavioral claims.
