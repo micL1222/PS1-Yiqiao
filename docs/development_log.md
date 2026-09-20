@@ -17,3 +17,12 @@
 - Executed the notebook from a fresh process and saved actual JSON, CSV, and Markdown outputs.
 - Boundary c = 0 and c = V cases are degenerate; no exhaustive mixed-boundary claim is made.
 - Real AI behavior, human behavior, and educational outcomes remain untested. Next likely stage is the research teaser and integration of verified results into the PS1 paper; that stage has not begun.
+
+## 2026-09-20 — Local artifact integration
+
+- Kept the original payoff model and 14 baseline tests semantically unchanged; re-running Step 2 generated identical baseline JSON, CSV, and summary bytes before new work.
+- Built a local Gradio 4.44.1 prototype in an isolated Python 3.9.6 `.venv-demo`. A `huggingface_hub<1.0` constraint resolved an import incompatibility. Ten demo logic tests, app instantiation, and a localhost HTTP 200 smoke test passed; the server was terminated and no public share link was used.
+- Generated the vector cost-sweep PDF and PNG from the actual `outputs/cost_sweep.csv` interior points only. The PDF was rendered and visually checked; no raster-image object was embedded.
+- Created the editable Draw.io teaser master, caption, and accessibility description. The XML contains 14 editable shapes and 9 connectors and passed structural validation. No local Draw.io export mechanism was found, so the optional teaser PDF awaits manual vector export.
+- Added the project-wide consistency validator and `./scripts/verify_all.sh`. The full workflow passed the 14 original tests, 10 demo tests, fresh six-cell notebook execution, and 16/16 objective validator checks.
+- Formal-model computations are distinct from real AI or human observations. No behavioral experiment or educational effectiveness evaluation was conducted.

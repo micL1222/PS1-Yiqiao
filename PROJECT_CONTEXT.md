@@ -5,7 +5,7 @@
 - **Course:** COMSCI/ECON 206 Computational Microeconomics, Autumn 2026 Session 1.
 - **Project:** Revised PS1 v2 research proposal, developed individually.
 - **Working title:** Who Pays to Know? Strategic Information Acquisition Before AI Collective Decisions.
-- **Status:** Formal Python implementation, automated tests, six-case cost sweep, saved computational outputs, and a freshly executed notebook exist. The baseline equilibrium claims below were computationally verified; no behavioral verification has been run.
+- **Status:** Step 3 local artifact integration completed and checked: formal model and sweep, isolated Gradio demo, vector cost-sweep figure, editable Draw.io teaser master, fresh notebook execution, and project validator. No behavioral or educational-outcome evaluation has been run.
 - **Authorship:** The author independently developed the research question and strategic model. AI assistance is limited to implementation, debugging, project organization, drafting assistance, reproducibility checks, and technical verification after that reasoning.
 
 ## Motivation and formal baseline
@@ -37,18 +37,23 @@ The author's initial **theoretical predictions** were the pure-strategy Nash equ
 
 ## Evidence status
 
-The theoretical model, computational verification, executed notebook, and generated JSON/CSV/Markdown outputs now exist. The baseline has two verified pure equilibria and one verified interior mixed equilibrium; the discrete V = 4 cost sweep checks c = 0 through 5. There is still no synthetic or simulated agent-behavior result, observed LLM or human behavior, or validated educational outcome. Distinguish **theoretical prediction**, **computationally verified result**, **synthetic or simulated result**, **observed LLM behavior**, **observed human behavior**, **expected result**, and **planned future test** in all future work. See `docs/evidence_status.md`.
+The theoretical model, computational verification, executed notebook, generated JSON/CSV/Markdown outputs, local Gradio demo, vector cost-sweep figure, and editable Draw.io teaser now exist. The baseline has two verified pure equilibria and one verified interior mixed equilibrium; the discrete V = 4 cost sweep checks c = 0 through 5. The demo illustrates the formal game only. There is still no synthetic or simulated agent-behavior result, observed LLM or human behavior, or validated educational outcome. Distinguish **theoretical prediction**, **computationally verified result**, **synthetic or simulated result**, **observed LLM behavior**, **observed human behavior**, **expected result**, and **planned future test** in all future work. See `docs/evidence_status.md`.
 
 ## Workflow state
 
-1. **Completed:** Implement the formal game in `src/information_acquisition_game.py`.
-2. **Completed:** Verify the baseline using NashPy and an independent pure best-response checker.
-3. **Completed:** Check V = 4 at c = 0, 1, 2, 3, 4, 5.
-4. **Completed:** Create and execute `notebooks/information_acquisition_baseline.ipynb`; save actual outputs in `outputs/`.
-5. **Next likely stage, not started:** Design the research teaser and integrate the verified baseline into the PS1 paper.
-6. **Later, not started:** Build or revise a Hugging Face educational demo.
+- **Completed Step 2:** Implement the formal game, independently check pure equilibria, verify NashPy baseline and c = 0 through 5 sweep, and execute the notebook.
+- **Completed Step 3:** Build the local Gradio prototype in `demo/`, generate a vector cost-sweep PDF and PNG from `outputs/cost_sweep.csv`, create the editable `figures/ps1_teaser.drawio` master, add demo tests and `scripts/validate_project.py`, and run `./scripts/verify_all.sh`. The workflow passed 14 original model tests, 10 demo logic tests, fresh notebook execution, and 16/16 validator checks. A localhost HTTP smoke test returned 200 and the server was stopped.
+- **Manual Step 3 follow-up:** No local Draw.io export mechanism was available. Open the master in diagrams.net, review its layout, and export `figures/ps1_teaser.pdf` as a vector PDF before using it in a paper.
 
-The code uses [Research, Skip] action order. Boundary c = 0 and c = V cases are degenerate; direct enumeration lists all pure equilibria, while finite support enumeration does not establish a complete boundary mixed-equilibrium correspondence.
+The code uses [Research, Skip] action order. Boundary c = 0 and c = V cases are degenerate; direct enumeration lists all pure equilibria, while finite support enumeration does not establish a complete boundary mixed-equilibrium correspondence. The app has not been deployed, and educational effectiveness has not been evaluated.
+
+## Future stages — not begun
+
+1. Scholarly literature and citation verification.
+2. PS1 LaTeX paper construction.
+3. Publication of GitHub and Google Colab artifacts.
+4. Hugging Face deployment.
+5. Final cross-artifact submission audit.
 
 ## Constraints for future work
 
