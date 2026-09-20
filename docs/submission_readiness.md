@@ -15,10 +15,10 @@ Research-artifact verification and final-submission readiness are separate. The 
 | Verified local Git commit/tag | COMPLETE AFTER FREEZE | `ps1-v2-verified` tag; use `git rev-parse` for full SHA | Preserve tag and report hash externally. |
 | GitHub publication | PUBLISHED AND VERIFIED | Public `micL1222/PS1-Yiqiao` v2 branch, verified commit, tag, README, notebook, demo, outputs, paper source checked via GitHub API | Preserve v1 `main`; no force push. |
 | Google Colab URL | PUBLISHED AND VERIFIED AT LINK LEVEL | GitHub notebook and Colab URL returned HTTP 200; six notebook code cells fresh-ran locally | Hosted Google Colab execution remains unverified. |
-| Hugging Face Space | AUTH BLOCKED | `hf auth whoami` reported no login; local staging passed imports and HTTP 200 | Author runs `hf auth login`; then inspect/create public Space and deploy minimal package. |
+| Hugging Face Space | PUBLISHED AND RUNNING | The author manually uploaded the [Static Space in the official course organization](https://huggingface.co/spaces/dku-comsci-econ206-2026/who-pays-to-know); five source files match `deployment/huggingface-static/`, and Python/JavaScript parity passes. | Keep the source and deployed artifact aligned. |
 | Code snapshot and Overleaf source ZIP | COMPLETE LOCALLY AFTER PACKAGING | `submission/` archives are local and excluded from Git | Verify ZIPs and upload only the paper ZIP to Overleaf. |
 | Final Overleaf PDF and source | MANUAL OVERLEAF STEP REMAINING | Local candidate PDF only | Import paper source ZIP, compile with pdfLaTeX, inspect, download PDF and source. |
 | Canvas submission | MANUAL STEP REMAINING | No submission made | Submit authoritative files after final review. |
 | v1/review record preservation | COMPLETE LOCALLY | Week3 project inspected read-only; no review file opened | Author preserves private historical records. |
 
-The Hugging Face URL remains absent because deployment is authentication blocked. No behavioral experiment or educational-effectiveness evaluation has been conducted. The project is not yet ready for final submission while the required Space and manual course steps remain.
+The Hugging Face Static Space is released. The earlier Gradio plan restrictions are historical. No behavioral experiment or educational-effectiveness evaluation has been conducted. Final Overleaf and Human-Only/course-process steps remain before submission.

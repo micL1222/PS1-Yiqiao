@@ -1,0 +1,9 @@
+(function(g){"use strict";
+const A=["R","S"];
+const n=x=>Math.max(0,Number.isFinite(Number(x))?Number(x):0);
+function payoffs(V,c){V=n(V);c=n(c);return{RR:[V-c,V-c],RS:[V-c,V],SR:[V,V-c],SS:[0,0]}}
+function pure(V,c){const m=payoffs(V,c),out=[];for(const a of A)for(const b of A){const k=a+b,p=m[k],aa=a==="R"?"S":"R",bb=b==="R"?"S":"R";if(p[0]>=m[aa+b][0]-1e-12&&p[1]>=m[a+bb][1]-1e-12)out.push([a,b])}return out}
+function mixed(V,c){V=n(V);c=n(c);if(V<=0)return{type:"boundary",text:"No strict interior mixed formula when V=0."};if(c===0)return{type:"boundary",text:"Boundary / degenerate case at c=0."};if(c>0&&c<V){const p=1-c/V;return{type:"interior",pR:p,pS:1-p,text:"Strict interior symmetric mixed equilibrium."}}if(Math.abs(c-V)<1e-12)return{type:"boundary",text:"Boundary / degenerate case at c=V."};return{type:"outside",text:"No strict interior mixed equilibrium formula applies when c>V."}}
+function region(V,c){V=n(V);c=n(c);if(V===0&&c===0)return["Zero-value, zero-cost boundary","All payoffs are zero; this is fully degenerate."];if(V===0)return["No information value","Research creates no value and costs c>0, so Skip is preferable."];if(c===0)return["Costless research boundary","Research is costless, creating indifference and multiple equilibria."];if(c<V)return["Free-riding region: 0<c<V","If the other researches, Skip saves c. If the other skips, Research is worthwhile because V-c>0."];if(Math.abs(c-V)<1e-12)return["Boundary: c=V","Researching alone gives zero net payoff, producing additional indifference."];return["High-cost region: c>V","Researching alone gives V-c<0, so Skip is preferable."]}
+function fmt(p){return`(${p[0]},${p[1]})`}
+const api={payoffs,pure,mixed,region,fmt};if(typeof module!=="undefined"&&module.exports)module.exports=api;g.InfoAcquisitionModel=api})(typeof window!=="undefined"?window:globalThis);

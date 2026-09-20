@@ -53,3 +53,16 @@
 - Froze the locally verified snapshot as `b986771d1e79979825cd375c8ed663994bdc67ec` and tagged it `ps1-v2-verified`. Pushed it to a new public `v2-information-acquisition` branch of the author's personal `PS1-Yiqiao` repository without force; remote v1 `main` remained at its prior commit.
 - Added the actual public-repository bootstrap to the notebook, fresh-executed its six code cells locally, and pushed that notebook update separately. The GitHub notebook page and constructed Colab URL returned HTTP 200. Google's hosted runtime was not executed.
 - Hugging Face CLI and Git credential lookups found no authentication. The minimal Space staging package passed source parity, app instantiation, model logic, and localhost HTTP 200; no public Space was created.
+
+## 2026-09-20 — Hugging Face hosting-plan checks
+
+- Hugging Face authentication was completed and confirmed as `mickeystk`, with membership in `dku-comsci-econ206-2026`. The preferred course-organization Gradio Space creation returned HTTP 402: free `cpu-basic` Gradio/Docker hosting required an organization Team or Enterprise plan. No organization Space or setting was changed.
+- The author explicitly approved a public personal-namespace deployment as a fallback. The target `mickeystk/who-pays-to-know` did not previously exist. Its Gradio Space creation also returned HTTP 402: personal free `cpu-basic` Gradio/Docker hosting required PRO. No personal Space was created and no files were uploaded. These were hosting-plan restrictions, not app-code failures.
+- The seven-file staging package remained byte-identical to the trusted model/demo sources, except for synchronized display-only wording that states the full project title, formal-model status, and unevaluated educational effectiveness. Offline imports, V=4/c=2 payoffs, pure and mixed equilibria, `share=False`, and local HTTP 200 passed. The verified economic model was not changed.
+
+## 2026-09-20 — Final Static Space and personal-fork source
+
+- The author adapted the prototype to a free HTML/CSS/JavaScript Static Space and manually uploaded the final five source files to the official course organization. Codex assisted with source preparation and verification; Codex did not perform the successful upload.
+- The [public Space](https://huggingface.co/spaces/dku-comsci-econ206-2026/who-pays-to-know) reports SDK `static`, is running, and displays the V = 4, c = 2 baseline. At remote Space revision `ad074311cb3320eb525f10734c7b4de702a517f8`, the five application files copied into `deployment/huggingface-static/` matched the live source byte for byte. Extra uploaded ZIP files are not included in the personal repository source package.
+- The earlier course-organization and personal Gradio attempts were blocked by plan restrictions and remain historical notes only. `deployment/huggingface/` is retained as historical staging, while `deployment/huggingface-static/` is the final source.
+- The JavaScript game was compared with the trusted Python model for V = 4 and c = 0 through 5, including all payoff cells, pure equilibria, and interior mixed probabilities. No observed human/LLM behavior or educational-effectiveness study was conducted.

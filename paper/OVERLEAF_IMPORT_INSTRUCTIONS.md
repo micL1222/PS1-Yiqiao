@@ -4,7 +4,7 @@ The final submission PDF is compiled and visually checked in Overleaf. This repo
 
 1. Confirm the author-approved vector PDF in figures/ps1_teaser.pdf matches paper/figures/ps1_teaser.pdf, and keep the matching editable .drawio master in paper/figures/.
 2. From the project root, run ./scripts/verify_all.sh. Resolve any failure. Run ./scripts/build_paper.sh and confirm Figure 1 appears and the main sections end by page 2.
-3. Review unresolved workshop and Human-Only requirements in `MANUAL_INPUTS_REQUIRED.md`, along with any publication status. Author identity, field-trip metadata, and Figure 1 are filled. Check citations and claims yourself.
+3. Review unresolved workshop and Human-Only requirements in `MANUAL_INPUTS_REQUIRED.md`. Author identity, field-trip metadata, Figure 1, and the verified public Hugging Face Static Space URL are filled. Check citations and claims yourself before authoritative Overleaf compilation.
 4. Use `submission/PS1-yl1081-overleaf-source.zip`. It packages the contents of `paper/` with `main.tex` at the ZIP root and excludes `paper/build/` and local temporary files. Inspect its contents before upload.
 5. In Overleaf, choose **New Project → Upload Project**, then upload that ZIP. No account or project is created by this local work.
 6. Set **Main Document** to main.tex and **Compiler** to **pdfLaTeX**. Compile. Recompile once more if citations need a BibTeX refresh.

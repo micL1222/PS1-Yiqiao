@@ -16,15 +16,16 @@ from src.information_acquisition_game import ACTIONS
 
 def build_app():
     """Construct the local-only educational interface without launching it."""
-    with gr.Blocks(title="Who Pays to Know?") as app:
-        gr.Markdown("# Who Pays to Know?\n## Strategic Information Acquisition Game")
+    with gr.Blocks(title="Who Pays to Know? Strategic Information Acquisition Before AI Collective Decisions") as app:
+        gr.Markdown("# Who Pays to Know?\n## Strategic Information Acquisition Before AI Collective Decisions")
         gr.Markdown(
             "An interactive formal model of costly research, shared information, and free-riding "
             "before a collective decision."
         )
         gr.Markdown(
-            "**Evidence status:** This demo illustrates a formal game-theoretic model. "
-            "It does not simulate or measure actual LLM or human behavior."
+            "**Evidence status:** This is a formal game-theoretic educational prototype. "
+            "It does not simulate or measure actual LLM or human behavior. "
+            "Educational effectiveness has not been evaluated."
         )
         with gr.Tab("Play One Strategic Decision"):
             gr.Markdown("Choose A's action after selecting B's action. Compare A's payoff with a unilateral change.")

@@ -5,7 +5,7 @@
 - **Course:** COMSCI/ECON 206 Computational Microeconomics, Autumn 2026 Session 1.
 - **Project:** Revised PS1 v2 research proposal, developed individually.
 - **Working title:** Who Pays to Know? Strategic Information Acquisition Before AI Collective Decisions.
-- **Status:** Formal model, sweep, demo, approved Figure 1, author-confirmed field-trip metadata, five-section ACM paper, appendices, local PDF build, and validators are complete locally. The verified snapshot is public on the separate `v2-information-acquisition` branch of `micL1222/PS1-Yiqiao`, and the GitHub-backed Colab URL is HTTP-accessible; hosted Colab execution is unverified. Hugging Face publication is authentication blocked. Final Overleaf compilation and Human-Only/course-process work remain. No behavioral or educational-outcome evaluation has been run.
+- **Status:** Formal model, sweep, approved Figure 1, author-confirmed field-trip metadata, five-section ACM paper, appendices, local PDF build, and validators are complete locally. The verified snapshot is public on the separate `v2-information-acquisition` branch of `micL1222/PS1-Yiqiao`; the Colab link is available, although hosted Colab execution is unverified. The author manually deployed the final [Hugging Face Static Space](https://huggingface.co/spaces/dku-comsci-econ206-2026/who-pays-to-know) to the official course organization; it is public and running. Final Overleaf compilation and Human-Only/course-process work remain. No behavioral or educational-outcome evaluation has been run.
 - **Authorship:** The author supplied the original reassessment, strategic idea, model decisions, and interpretation. OpenAI Codex provided substantial implementation, debugging, artifact construction, drafting, source checking, and verification assistance. The author retains final responsibility.
 
 ## Motivation and formal baseline
@@ -37,7 +37,7 @@ The author's initial **theoretical predictions** were the pure-strategy Nash equ
 
 ## Evidence status
 
-The theoretical model, computational verification, executed notebook, generated JSON/CSV/Markdown outputs, local Gradio demo, vector cost-sweep figure, and editable Draw.io teaser now exist. The baseline has two verified pure equilibria and one verified interior mixed equilibrium; the discrete V = 4 cost sweep checks c = 0 through 5. The demo illustrates the formal game only. There is still no synthetic or simulated agent-behavior result, observed LLM or human behavior, or validated educational outcome. Distinguish **theoretical prediction**, **computationally verified result**, **synthetic or simulated result**, **observed LLM behavior**, **observed human behavior**, **expected result**, and **planned future test** in all future work. See `docs/evidence_status.md`.
+The theoretical model, computational verification, executed notebook, generated JSON/CSV/Markdown outputs, public Static Space, historical local Gradio demo, vector cost-sweep figure, and editable Draw.io teaser now exist. The baseline has two verified pure equilibria and one verified interior mixed equilibrium; the discrete V = 4 cost sweep checks c = 0 through 5. The Static Space illustrates the formal game only, and its JavaScript model is checked against the trusted Python model by `scripts/validate_static_space.py`. There is still no synthetic or simulated agent-behavior result, observed LLM or human behavior, or validated educational outcome. Distinguish **theoretical prediction**, **computationally verified result**, **synthetic or simulated result**, **observed LLM behavior**, **observed human behavior**, **expected result**, and **planned future test** in all future work. See `docs/evidence_status.md`.
 
 ## Workflow state
 
@@ -47,14 +47,14 @@ The theoretical model, computational verification, executed notebook, generated 
 - **Completed Step 4 local draft:** Retrieved the official public course template, retained ACM class/BibTeX style, verified seven sources against primary or official pages, and drafted exactly five main sections and Appendices A–E. No peer-review file was accessed or represented as direct feedback on v2.
 - **Step 5A/5B local context:** The author supplied verified individual identity and the reason for changing topics. Session B was recovered from the author's own v1 `main.tex`; title, role, and teammate names remain unverified and omitted from the paper. The author confirmed September 4 attendance at both field-trip sites and personally taking both copied photographs. No week3 file was changed. One accessible review concerns v1 only; another assigned review is inaccessible, and neither review's substantive file was accessed. Remaining Human-Only inputs are in `paper/MANUAL_INPUTS_REQUIRED.md`.
 
-The code uses [Research, Skip] action order. Boundary c = 0 and c = V cases are degenerate; direct enumeration lists all pure equilibria, while finite support enumeration does not establish a complete boundary mixed-equilibrium correspondence. The app has not been deployed, and educational effectiveness has not been evaluated.
+The code uses [Research, Skip] action order. Boundary c = 0 and c = V cases are degenerate; direct enumeration lists all pure equilibria, while finite support enumeration does not establish a complete boundary mixed-equilibrium correspondence. The Static Space is deployed; educational effectiveness has not been evaluated.
 
 ## Remaining stages
 
 1. Author review and completion of remaining Human-Only and workshop details, if required.
 2. Keep the public v2 GitHub branch and Colab notebook consistent with the verified artifact tag; do not rewrite v1 `main`.
-3. Authenticate Hugging Face and deploy the tested minimal Space package; no Space URL exists yet.
-4. Final Overleaf compilation, two-page visual check, source ZIP, and cross-artifact submission audit.
+3. Keep `deployment/huggingface-static/` aligned with the manually deployed Static Space. `deployment/huggingface/` records an unsuccessful historical Gradio approach.
+4. Final Overleaf compilation, visual check, source ZIP, and cross-artifact submission audit.
 
 ## Constraints for future work
 

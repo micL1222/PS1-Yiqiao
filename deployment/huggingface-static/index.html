@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Who Pays to Know?</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <p class="eyebrow">COMSCI/ECON 206 · Computational Microeconomics</p>
+    <h1>Who Pays to Know?</h1>
+    <p class="subtitle">Strategic Information Acquisition Before AI Collective Decisions</p>
+    <p class="lede">Two agents independently choose <b>Research</b> or <b>Skip</b>. Research creates shared information value <b>V</b>, but the researcher pays private cost <b>c</b>.</p>
+  </div>
+</header>
+
+<main class="wrap">
+<section class="panel">
+  <div class="heading-row">
+    <div><p class="kicker">Model inputs</p><h2>Choose V and c</h2></div>
+    <button id="reset">Reset to V=4, c=2</button>
+  </div>
+  <div class="controls">
+    <label>Shared information value V
+      <input id="vNum" type="number" min="0" max="10" step="0.5" value="4">
+      <input id="vRange" type="range" min="0" max="10" step="0.5" value="4">
+    </label>
+    <label>Private research cost c
+      <input id="cNum" type="number" min="0" max="10" step="0.5" value="2">
+      <input id="cRange" type="range" min="0" max="10" step="0.5" value="2">
+    </label>
+  </div>
+</section>
+
+<section class="grid2">
+  <article class="panel">
+    <p class="kicker">Formal game</p><h2>Payoff matrix</h2>
+    <p class="muted">Each cell is (Agent A payoff, Agent B payoff).</p>
+    <table>
+      <thead><tr><th>A \ B</th><th>Research</th><th>Skip</th></tr></thead>
+      <tbody>
+        <tr><th>Research</th><td id="RR"></td><td id="RS"></td></tr>
+        <tr><th>Skip</th><td id="SR"></td><td id="SS"></td></tr>
+      </tbody>
+    </table>
+  </article>
+
+  <article class="panel">
+    <p class="kicker">Strategic outcome</p><h2>Equilibrium analysis</h2>
+    <h3>Pure Nash equilibria</h3>
+    <p id="pure" class="result"></p>
+    <h3>Symmetric mixed equilibrium</h3>
+    <div id="mixed"></div>
+    <div class="status"><b id="regionTitle"></b><p id="regionText"></p></div>
+  </article>
+</section>
+
+<section class="grid2">
+  <article class="panel">
+    <p class="kicker">Best responses</p><h2>Why free-riding appears</h2>
+    <div class="reason-box"><h3>If B researches</h3><p id="br1"></p></div>
+    <div class="reason-box"><h3>If B skips</h3><p id="br2"></p></div>
+    <p class="note">This is a formal model result, not observed behavior.</p>
+  </article>
+
+  <article class="panel">
+    <p class="kicker">Cost sensitivity</p><h2>Mixed-strategy benchmark</h2>
+    <p class="muted">For 0 &lt; c &lt; V, p(Research)=1-c/V.</p>
+    <div id="chart"></div>
+    <p id="chartText" class="muted"></p>
+  </article>
+</section>
+
+<section class="panel">
+  <p class="kicker">Three interdisciplinary lenses</p>
+  <div class="lenses">
+    <div><h3>Economics</h3><p>Private cost + shared benefit · Free-riding · Best responses · Nash equilibrium</p></div>
+    <div><h3>Computation</h3><p>Payoff matrix · Algorithmic checks · Verified baseline · Cost sensitivity</p></div>
+    <div class="planned"><h3>Behavior</h3><p>Beliefs · Bounded strategic reasoning · Future empirical comparison</p><b>PLANNED / NOT YET TESTED</b></div>
+  </div>
+</section>
+
+<section class="panel">
+  <p class="kicker">Evidence status</p>
+  <div class="grid2">
+    <div><h3>Verified in this project</h3><ul><li>Formal payoff model</li><li>Pure-equilibrium computation</li><li>NashPy baseline comparison</li><li>Mixed-equilibrium derivation</li><li>Cost sweep</li><li>Automated tests</li></ul></div>
+    <div><h3>Not tested</h3><ul><li>Human behavior</li><li>LLM-agent behavior</li><li>Educational effectiveness</li></ul></div>
+  </div>
+</section>
+
+<section class="panel">
+  <p class="kicker">Open research artifacts</p>
+  <div class="links">
+    <a href="https://github.com/micL1222/PS1-Yiqiao/tree/v2-information-acquisition" target="_blank">GitHub ↗</a>
+    <a href="https://colab.research.google.com/github/micL1222/PS1-Yiqiao/blob/v2-information-acquisition/notebooks/information_acquisition_baseline.ipynb" target="_blank">Colab ↗</a>
+    <a href="https://github.com/micL1222/PS1-Yiqiao/commit/b986771d1e79979825cd375c8ed663994bdc67ec" target="_blank">Verified commit ↗</a>
+  </div>
+</section>
+</main>
+
+<footer>Formal game-theoretic educational prototype · Educational effectiveness has not been evaluated.</footer>
+<script src="model.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

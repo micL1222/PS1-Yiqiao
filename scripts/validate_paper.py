@@ -100,15 +100,17 @@ def check_citations() -> None:
 
 def check_statements() -> None:
     section5 = read(PAPER / "sections/section5_future.tex")
-    for phrase in ("Open Science Statement", "public GitHub v2 branch", "Google Colab notebook", "b986771", "Statement of Contribution to the UN's SDGs", "Hugging Face Space deployment awaits authentication", "SDG 4", "By 2056, I aspire to"):
+    for phrase in ("Open Science Statement", "public GitHub v2 branch", "Google Colab notebook", "b986771", "Statement of Contribution to the UN's SDGs", "Hugging Face Static Space", "Educational effectiveness has not been evaluated.", "SDG 4", "By 2056, I aspire to"):
         require(phrase in section5, f"Statement missing: {phrase}")
     for url in (
         "https://github.com/micL1222/PS1-Yiqiao/tree/v2-information-acquisition",
         "https://colab.research.google.com/github/micL1222/PS1-Yiqiao/blob/v2-information-acquisition/notebooks/information_acquisition_baseline.ipynb",
         "https://github.com/micL1222/PS1-Yiqiao/commit/b986771d1e79979825cd375c8ed663994bdc67ec",
+        "https://huggingface.co/spaces/dku-comsci-econ206-2026/who-pays-to-know",
     ):
         require(url in section5, f"Verified public URL missing: {url}")
-    require("[pending publication]" not in section5 and "[pending deployment]" not in section5, "Obsolete publication placeholder remains")
+    for stale in ("[pending publication]", "[pending deployment]", "awaits authentication", "not yet available", "Hugging Face unavailable", "PLACEHOLDER", "TBD"):
+        require(stale not in all_tex(), f"Obsolete publication placeholder remains: {stale}")
 
 
 def check_claims() -> None:

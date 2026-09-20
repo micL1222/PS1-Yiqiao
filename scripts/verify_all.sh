@@ -25,6 +25,7 @@ assert not any(out['output_type']=='error' for cell in code for out in cell.get(
 print(f'Fresh notebook execution: PASS ({len(code)} code cells)')
 PY
 .venv/bin/python scripts/validate_project.py
+.venv/bin/python scripts/validate_static_space.py
 echo "Research artifact verification: PASS"
 .venv/bin/python scripts/validate_paper.py
 if command -v latexmk >/dev/null 2>&1 && command -v pdflatex >/dev/null 2>&1 && command -v bibtex >/dev/null 2>&1; then
