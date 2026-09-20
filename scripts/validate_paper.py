@@ -100,9 +100,15 @@ def check_citations() -> None:
 
 def check_statements() -> None:
     section5 = read(PAPER / "sections/section5_future.tex")
-    for phrase in ("Open Science Statement", "GitHub: [pending publication]", "Google Colab: [pending publication]", "Statement of Contribution to the UN's SDGs", "Hugging Face: [pending deployment]", "SDG 4", "By 2056, I aspire to"):
+    for phrase in ("Open Science Statement", "public GitHub v2 branch", "Google Colab notebook", "b986771", "Statement of Contribution to the UN's SDGs", "Hugging Face Space deployment awaits authentication", "SDG 4", "By 2056, I aspire to"):
         require(phrase in section5, f"Statement missing: {phrase}")
-    require(not re.search(r"https?://", all_tex()), "URL in paper prose; inspect publication status")
+    for url in (
+        "https://github.com/micL1222/PS1-Yiqiao/tree/v2-information-acquisition",
+        "https://colab.research.google.com/github/micL1222/PS1-Yiqiao/blob/v2-information-acquisition/notebooks/information_acquisition_baseline.ipynb",
+        "https://github.com/micL1222/PS1-Yiqiao/commit/b986771d1e79979825cd375c8ed663994bdc67ec",
+    ):
+        require(url in section5, f"Verified public URL missing: {url}")
+    require("[pending publication]" not in section5 and "[pending deployment]" not in section5, "Obsolete publication placeholder remains")
 
 
 def check_claims() -> None:

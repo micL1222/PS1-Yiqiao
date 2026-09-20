@@ -5,7 +5,7 @@
 - **Course:** COMSCI/ECON 206 Computational Microeconomics, Autumn 2026 Session 1.
 - **Project:** Revised PS1 v2 research proposal, developed individually.
 - **Working title:** Who Pays to Know? Strategic Information Acquisition Before AI Collective Decisions.
-- **Status:** Formal model, sweep, demo, approved Figure 1, author-confirmed field-trip metadata, five-section ACM paper, appendices, local PDF build, and validators are complete locally. GitHub publication is possible through a verified macOS Git credential, and the existing personal v1 repository has a free v2 branch name; Hugging Face publication is authentication blocked. Colab requires the actual public GitHub branch. Final Overleaf compilation and Human-Only/course-process work remain. No behavioral or educational-outcome evaluation has been run.
+- **Status:** Formal model, sweep, demo, approved Figure 1, author-confirmed field-trip metadata, five-section ACM paper, appendices, local PDF build, and validators are complete locally. The verified snapshot is public on the separate `v2-information-acquisition` branch of `micL1222/PS1-Yiqiao`, and the GitHub-backed Colab URL is HTTP-accessible; hosted Colab execution is unverified. Hugging Face publication is authentication blocked. Final Overleaf compilation and Human-Only/course-process work remain. No behavioral or educational-outcome evaluation has been run.
 - **Authorship:** The author supplied the original reassessment, strategic idea, model decisions, and interpretation. OpenAI Codex provided substantial implementation, debugging, artifact construction, drafting, source checking, and verification assistance. The author retains final responsibility.
 
 ## Motivation and formal baseline
@@ -52,8 +52,8 @@ The code uses [Research, Skip] action order. Boundary c = 0 and c = V cases are 
 ## Remaining stages
 
 1. Author review and completion of remaining Human-Only and workshop details, if required.
-2. Publish the verified repository to the unused v2 branch without force; then adapt and verify the notebook for that public branch and construct a real Colab URL.
-3. Authenticate Hugging Face and deploy the tested minimal Space package.
+2. Keep the public v2 GitHub branch and Colab notebook consistent with the verified artifact tag; do not rewrite v1 `main`.
+3. Authenticate Hugging Face and deploy the tested minimal Space package; no Space URL exists yet.
 4. Final Overleaf compilation, two-page visual check, source ZIP, and cross-artifact submission audit.
 
 ## Constraints for future work

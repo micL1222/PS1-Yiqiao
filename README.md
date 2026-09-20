@@ -6,7 +6,7 @@
 
 This repository is the clean v2 workspace for a revised COMSCI/ECON 206 PS1 research proposal.
 
-**Current status:** Formal baseline and cost sweep verified; local demo, computational figure, and author-approved teaser are built and checked. The individual-author paper compiles locally with the official course ACM template, Figure 1, and two author-confirmed field-trip photos; its five numbered main sections finish on page 2. GitHub publication is in progress through a verified Git credential; Hugging Face publication remains authentication blocked. The final Overleaf compile and human/course-process inputs remain. Behavioral questions and educational effectiveness remain untested.
+**Current status:** Formal baseline and cost sweep verified; local demo, computational figure, and author-approved teaser are built and checked. The individual-author paper compiles locally with the official course ACM template, Figure 1, and two author-confirmed field-trip photos; its five numbered main sections finish on page 2. The verified snapshot is published on a separate GitHub v2 branch, and a GitHub-backed Colab link is available. Hugging Face publication remains authentication blocked. The final Overleaf compile and human/course-process inputs remain. Behavioral questions and educational effectiveness remain untested.
 
 ## Research Question
 
@@ -77,9 +77,10 @@ The paper source is in paper/main.tex, with five numbered sections, verified lit
 
 ## Publication and Evidence Status
 
-- Hugging Face deployment: authentication unavailable; minimal staging package preparation is tracked in `deployment/huggingface/`.
-- Google Colab publication: pending an actual public GitHub branch and portable notebook bootstrap.
-- GitHub: the `micL1222` account was verified with an existing macOS Git credential; the personal PS1 repository has only its v1 `main` branch. A separate v2 branch will preserve it.
+- GitHub repository: [PS1-Yiqiao, v2-information-acquisition branch](https://github.com/micL1222/PS1-Yiqiao/tree/v2-information-acquisition). The v1 `main` branch remains separate.
+- Verified computational/artifact snapshot: [`b986771d1e79979825cd375c8ed663994bdc67ec`](https://github.com/micL1222/PS1-Yiqiao/commit/b986771d1e79979825cd375c8ed663994bdc67ec), tagged [`ps1-v2-verified`](https://github.com/micL1222/PS1-Yiqiao/tree/ps1-v2-verified).
+- Google Colab: [GitHub-backed baseline notebook](https://colab.research.google.com/github/micL1222/PS1-Yiqiao/blob/v2-information-acquisition/notebooks/information_acquisition_baseline.ipynb). The notebook fresh-ran locally after the Colab bootstrap edit; hosted Colab execution has not been verified.
+- Hugging Face Space: authentication unavailable, so no public Space URL exists. The minimal tested staging package is in `deployment/huggingface/`; it passed local imports, app instantiation, and HTTP 200 with `share=False`.
 - Reuse: No explicit reuse license has yet been granted; public availability should not be interpreted as additional reuse permission.
 - Behavioral experiment: not conducted.
 - Human experiment: not conducted.

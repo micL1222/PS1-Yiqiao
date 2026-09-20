@@ -8,7 +8,7 @@ Author name, NetID, email, Session B, both field-trip sites, attendance, date, p
 2. Complete any required Human-Only workshop or handwritten reflection personally.
 3. If required by the course, personally respond to the accessible review of the superseded v1 topic. A second assigned review is currently inaccessible; request access or instructor clarification if a response is required. No reviewer content was accessed or incorporated into v2.
 4. Human-review all mathematical claims, citations, AI disclosure, acknowledgements, field-trip descriptions, and the current reuse status.
-5. Authenticate Hugging Face CLI (`hf auth login`) if the public Space is required; it reported no login on 2026-09-20. GitHub access was available through a verified macOS Git credential, and the separate v2 branch is being prepared. Check actual public URLs and backfill the paper before final submission.
+5. Authenticate Hugging Face CLI (`hf auth login`) if the public Space is required; it reported no login on 2026-09-20. GitHub v2 branch, verified commit/tag, and Colab URL have been published and checked. Deploy only the tested Space staging package, verify the real Space URL, and backfill it into the paper before final submission.
 6. Import the completed source ZIP into Overleaf, select `main.tex` and pdfLaTeX, compile, and inspect the final PDF, especially Figure 1 and the five-section two-page limit.
 7. Download the authoritative Overleaf PDF and source ZIP; submit through the course channel. Preserve the historical v1 project and private review records.
 
