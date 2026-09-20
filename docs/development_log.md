@@ -26,3 +26,12 @@
 - Created the editable Draw.io teaser master, caption, and accessibility description. The XML contains 14 editable shapes and 9 connectors and passed structural validation. No local Draw.io export mechanism was found, so the optional teaser PDF awaits manual vector export.
 - Added the project-wide consistency validator and `./scripts/verify_all.sh`. The full workflow passed the 14 original tests, 10 demo tests, fresh six-cell notebook execution, and 16/16 objective validator checks.
 - Formal-model computations are distinct from real AI or human observations. No behavioral experiment or educational effectiveness evaluation was conducted.
+
+## 2026-09-20 — Scholarly integration and local paper draft
+
+- The author's own reassessment of the earlier attention/interruption project led to the v2 costly-information game; the topic change is not attributed to peer review.
+- Re-ran the existing workflow before drafting: 14 model tests, 10 demo tests, six freshly executed notebook code cells, and 16/16 project checks passed.
+- Retrieved the official public PS1 Overleaf template into an ignored directory, retained its ACM class and BibTeX style, and drafted a five-section paper with Author Notes and Appendices A–E. The actual peer-review file was never accessed. The old v1 review is historical only; the second assigned peer review was not received.
+- Verified seven narrow literature/official-source claims, created a paper argument map, citation and claim audits, and a submission-readiness ledger.
+- Built a local six-page ACM draft. Its five main sections end by page 2 with a visible approximately full-size teaser placeholder. The final vector teaser PDF, author identity, workshop and field-trip details, Human-Only response/reflection, public URLs, and Overleaf final compilation remain pending.
+- No AI or human behavioral experiment or educational effectiveness evaluation was conducted.

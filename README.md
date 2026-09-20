@@ -6,11 +6,11 @@
 
 This repository is the clean v2 workspace for a revised COMSCI/ECON 206 PS1 research proposal.
 
-**Current status:** Formal baseline and cost sweep verified; Step 3 local demo, computational figure, and editable teaser are built and locally checked. The project-wide workflow passes. Behavioral questions and educational effectiveness remain untested.
+**Current status:** Formal baseline and cost sweep verified; local demo, computational figure, editable teaser, and a Step 4 Overleaf-ready source draft are built and locally checked. The paper compiles locally with the official course ACM template and a visible placeholder for the missing teaser PDF. Final submission inputs, public links, and Overleaf compilation remain pending. Behavioral questions and educational effectiveness remain untested.
 
 ## Research Question
 
-When information is costly but collectively valuable, when will AI agents acquire information themselves rather than free-ride on others, and how closely will computational or observed behavior match the game-theoretic prediction?
+When information is costly but collectively valuable, when will AI agents acquire information themselves rather than free-ride on others, and how closely will observed behavior match the formal game-theoretic prediction? The observed-behavior part is unanswered.
 
 ## Interdisciplinary Structure
 
@@ -45,7 +45,7 @@ The cost sweep holds V = 4 and checks c = 0 through 5. See `outputs/verification
 | `figures/` | Editable Draw.io teaser master, caption, accessibility description, and computational visualizations |
 | `demo/` | Local educational Gradio prototype using the verified model |
 | `scripts/` | Figure generation, artifact validation, and local verification workflow |
-| `paper/` | Eventual LaTeX / Overleaf source |
+| `paper/` | Official-template ACM LaTeX source, appendices, references, and Overleaf import guidance |
 | `docs/` | Research model, evidence tracking, and development record |
 | `tests/` | Automated tests for the computational baseline |
 
@@ -69,7 +69,11 @@ The local [Gradio prototype](demo/README.md) has two tabs: **Play One Strategic 
 
 ## Local Verification Workflow
 
-From the project root, run `./scripts/verify_all.sh`. It runs the original model tests, demo logic tests, baseline analysis, cost-sweep figure generation, a fresh notebook execution in an ignored local verification directory, and `scripts/validate_project.py`. The script does not install dependencies or publish artifacts.
+From the project root, run `./scripts/verify_all.sh`. It runs the original model tests, demo logic tests, baseline analysis, cost-sweep figure generation, a fresh notebook execution in an ignored local verification directory, and both project and paper validators. When pdfLaTeX, BibTeX, and latexmk are available, it builds and checks the local paper PDF and confirms that the five main sections end by page 2. The script does not install dependencies or publish artifacts.
+
+## Step 4 Paper Draft
+
+The paper source is in paper/main.tex, with five numbered sections, verified literature, Author Notes, and Appendices A–E. paper/TEMPLATE_PROVENANCE.md records the official public course template and compiler. docs/literature_verified.md, docs/citation_audit.md, and docs/claim_audit.md document the basis and limits of its claims. Build locally with ./scripts/build_paper.sh; the draft PDF is generated in the ignored paper/build/ directory. paper/OVERLEAF_IMPORT_INSTRUCTIONS.md gives the later upload workflow. paper/MANUAL_INPUTS_REQUIRED.md identifies final-submission blockers. No peer-review file was accessed in Step 4; the old v1 review is described only as historical process evidence, and the second assigned review is recorded as not received.
 
 ## Publication and Evidence Status
 

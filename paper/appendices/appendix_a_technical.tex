@@ -1,0 +1,18 @@
+\section{Technical Details and Reproducibility}
+\label{app:technical}
+For each agent \(i\), \(u_i=V\mathbf{1}\{a_A=R\ \mathrm{or}\ a_B=R\}-c\mathbf{1}\{a_i=R\}\), with \(V>0,c\geq0\). A and B choose simultaneously; the action order in code is [Research, Skip]. One research action is sufficient for the full information value. For \(V=4,c=2\), the matrices are \(A=\left[\begin{smallmatrix}2&2\\4&0\end{smallmatrix}\right]\) and \(B=\left[\begin{smallmatrix}2&4\\2&0\end{smallmatrix}\right]\). Direct best-response enumeration tests all four pure action profiles, including ties; NashPy support enumeration provides a separate computation.
+
+Let \(p\) be the probability that the \emph{other} player researches. Research yields \(U(R)=V-c\), while Skip yields \(U(S)=pV\). Interior indifference requires \(V-c=pV\), hence \(p=1-c/V\) for \(0<c<V\). The formula predicts \(0.75,0.50,0.25\) for \(c=1,2,3\) at \(V=4\), exactly matching the tested NashPy profiles. At \(c=0\), pure equilibria are (R,R), (R,S), (S,R). At \(c=4\), they are (R,S), (S,R), (S,S); at \(c=5\), only (S,S) is pure. The two boundary cases are degenerate, and finite support output is not a full account of boundary mixed-equilibrium continua. Invalid \(V\leq0\) and \(c<0\) are rejected by tests.
+
+The source is \url{src/information_acquisition_game.py}; the runner is \url{src/run_baseline_analysis.py}. Saved evidence is \url{outputs/baseline_equilibria.json}, \url{outputs/cost_sweep.csv}, \url{outputs/verification_summary.md}, and \url{notebooks/information_acquisition_baseline.ipynb}. The original suite has 14 model tests and 10 demo-logic tests. A fresh notebook run executes six code cells; the project validator passes 16 checks. The local demo uses the same model and illustrates formal choices, not observed decisions.
+
+The tested computational environment was Python 3.9.6, NumPy 2.0.2, NashPy 0.0.41, pandas 2.3.3, and matplotlib 3.9.4. The demo environment was Python 3.9.6 with Gradio 4.44.1. Dependencies in the repository are unpinned; these are the recorded tested versions, not a promise of identical behavior in every future environment. No stochastic seed is relevant to these deterministic checks. The cost-sweep vector figure below is generated from the saved CSV. It shows equilibrium probabilities, not observed Research frequencies.
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.65\textwidth]{figures/cost_sweep_mixed_probability.pdf}
+\caption{Formal mixed-equilibrium Research probability at \(V=4\) for tested strict-interior costs \(c=1,2,3\). These are theoretical equilibrium probabilities confirmed by computation, not empirical frequencies. Boundary cases are handled separately.}
+\Description{Three plotted points decrease from 0.75 at cost 1, to 0.50 at cost 2, to 0.25 at cost 3. They are computed formal equilibrium probabilities.}
+\end{figure}
+
+No real LLM or human choices, learning outcomes, or causal mechanism effects were measured.

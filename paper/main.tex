@@ -1,0 +1,65 @@
+\documentclass[sigconf,nonacm]{acmart}
+\settopmatter{printacmref=false,printfolios=true}
+\setcopyright{none}
+\renewcommand\footnotetextcopyrightpermission[1]{}
+\usepackage{amsmath,tabularx,array,enumitem}
+\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+\newcommand{\CourseNumber}{COMSCI/ECON 206}
+\newcommand{\CourseName}{Computational Microeconomics}
+\newcommand{\CourseSession}{Autumn 2026 Session 1}
+\newcommand{\WorkshopSession}{[SESSION]}
+\title{Who Pays to Know? Strategic Information Acquisition Before AI Collective Decisions}
+\author{[AUTHOR NAME]}
+\affiliation{\institution{Duke Kunshan University}\city{Kunshan}\country{China}}
+\email{[EMAIL]}
+\renewcommand{\shortauthors}{[AUTHOR NAME]}
+
+\begin{document}
+\begin{teaserfigure}
+  \centering
+  \IfFileExists{figures/ps1_teaser.pdf}{%
+    \includegraphics[width=\textwidth]{figures/ps1_teaser.pdf}%
+  }{%
+    \IfFileExists{../figures/ps1_teaser.pdf}{%
+      \includegraphics[width=\textwidth]{../figures/ps1_teaser.pdf}%
+    }{%
+      \fbox{\parbox[c][3.25in][c]{0.92\textwidth}{\centering
+        Figure 1 vector PDF pending manual Draw.io export.}}%
+    }%
+  }
+  \caption{Research design for costly information acquisition before a collective decision. Agents A and B independently choose Research or Skip. Each researcher pays private cost \(c\), while both agents receive information value \(V\) if at least one researches. The formal game creates free-riding incentives. Baseline equilibria and the discrete cost sweep were checked computationally with NashPy; tests of beliefs and bounded strategic reasoning remain planned.}
+  \Description{A left-to-right formal-game mechanism begins with private research cost c and collective information value V. Agents A and B independently choose Research or Skip; a researcher pays c. If either researches, information is shared before a collective decision, leading to free-riding incentives and Nash equilibria. Below, economics connects private cost and shared benefit to equilibrium, computation connects payoff matrices and NashPy to a verified baseline and cost sweep, and behavior connects beliefs and bounded reasoning to a planned test. Solid connectors mark modeled or computationally checked relationships; a dashed connector marks the planned behavioral extension. Formal equilibria are computationally verified, while model-behavior comparison is not yet tested.}
+  \label{fig:teaser}
+\end{teaserfigure}
+\maketitle
+\noindent\textbf{Submission to:} \CourseNumber{} --- \CourseName.
+\textbf{Course session:} \CourseSession.
+\textbf{Workshop:} \WorkshopSession.
+\textbf{NetID:} [NETID].
+\textbf{Instructor:} Luyao Zhang. \textbf{Assignment:} PS1 research proposal.
+
+\input{sections/section1_questions}
+\input{sections/section2_economics}
+\input{sections/section3_computation}
+\balance
+\input{sections/section4_behavior}
+\input{sections/section5_future}
+
+\clearpage
+\section*{Author Notes}
+\subsection*{Acknowledgements}
+The author acknowledges Prof. Luyao Zhang, Program Chair, and Prof. Ken Rogerson, Program Discussant, of the 2056 Nobel and Turing Laureate Program Launch Workshop at Duke Kunshan University on September 7, 2026. Workshop session: [WORKSHOP SESSION]. Assigned role: [ROLE]. Teammates: [TEAMMATE 1], [TEAMMATE 2]. Specific contributions and class acknowledgements: [AUTHOR TO VERIFY AND COMPLETE].
+\subsection*{Individual Contribution}
+The author developed the revised research problem and strategic direction, specified and interpreted the model, and retains responsibility for all final claims. OpenAI Codex assisted with implementation, debugging, tests, notebook and artifact organization, local demo development, drafting assistance, citation checking, and consistency verification. Codex is not a coauthor. Human verification of this draft is pending.
+
+\bibliographystyle{ACM-Reference-Format}
+\bibliography{references}
+\clearpage\onecolumn
+\appendix
+\input{appendices/appendix_a_technical}
+\input{appendices/appendix_a1_ai_use}
+\input{appendices/appendix_b_development}
+\input{appendices/appendix_c_field_trip}
+\input{appendices/appendix_d_review_revision}
+\input{appendices/appendix_e_structured_abstract}
+\end{document}

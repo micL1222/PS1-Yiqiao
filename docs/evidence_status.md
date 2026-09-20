@@ -15,5 +15,8 @@ This ledger separates the author’s initial theoretical predictions, subsequent
 | Real AI agents free-ride. | Not tested. | Planned future test; no observed LLM behavior. | None. | Define and run an LLM behavior study before making an observed claim. |
 | Humans free-ride in this setting. | Not tested. | Planned future test; no observed human behavior. | None. | Design an appropriate human study before making an observed claim. |
 | Hugging Face tool improves learning. | Not tested. | Planned future test; no validated educational outcome. | None. | Define learning measures and evaluate the future tool before making an outcome claim. |
+| Five-section paper and appendices represent the verified formal baseline. | Locally compiled draft; author review pending. | ACM LaTeX source plus local PDF and audits. | paper/main.tex, sections and appendices; literature, citation, and claim audits; paper validator and two-page local check. | Fill manual inputs, export Figure 1, and compile/inspect final Overleaf PDF. |
+| External literature supports the scoped intellectual lineage. | Seven sources verified against publisher, proceedings, or official pages. | Literature-supported context, not evidence for this model's behavior. | docs/literature_verified.md and paper/references.bib. | Final author citation and claim review. |
+| Final teaser vector PDF exists. | Missing; BLOCKING final submission. | Manual Draw.io export pending. | Editable master exists; local LaTeX draft shows visible placeholder. | Review master, export PDF, rebuild, and recheck two-page layout. |
 
 The computed outcomes are formal-model equilibria. No synthetic agent-behavior result, observed LLM behavior, observed human behavior, or validated educational outcome has been produced.

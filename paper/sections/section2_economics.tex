@@ -1,0 +1,12 @@
+\section{Answer to Q1: Incentives and Intellectual Lineage}
+Agents A and B simultaneously choose Research (R) or Skip (S) before a collective decision. A pure strategy chooses one action; a mixed strategy assigns probabilities to both. If either researches, each gains information value \(V\), and each researcher pays private cost \(c\); otherwise both receive zero. One research action supplies the full value. The baseline assumes common knowledge of \(V\), \(c\), actions, and payoff structure. We use Nash equilibrium~\cite{nash1950}.
+
+For \(V=4,c=2\), payoffs are ordered (A,B):
+\begin{center}
+\begin{tabular}{c|cc}
+ & B:R & B:S\\\hline
+A:R & (2,2) & (2,4)\\
+A:S & (4,2) & (0,0)
+\end{tabular}
+\end{center}
+When the other researches, Skip saves \(c\) while preserving \(V\). When the other skips and \(0<c<V\), Research yields \(V-c>0\). Thus the author's initial theoretical predictions, (R,S) and (S,R), are pure equilibria; both were later verified independently and with NashPy. A third, symmetric mixed equilibrium has each player research with probability \(0.5\), also verified. Persico~\cite{persico2004} supplies a related costly-information incentive question, not this game's payoffs or AI evidence.

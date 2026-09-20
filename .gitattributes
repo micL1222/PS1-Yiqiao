@@ -1,0 +1,3 @@
+# Preserve the byte-for-byte upstream ACM files, including their original whitespace.
+paper/acmart.cls -whitespace
+paper/ACM-Reference-Format.bst -whitespace

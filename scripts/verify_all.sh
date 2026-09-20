@@ -25,3 +25,12 @@ assert not any(out['output_type']=='error' for cell in code for out in cell.get(
 print(f'Fresh notebook execution: PASS ({len(code)} code cells)')
 PY
 .venv/bin/python scripts/validate_project.py
+echo "Research artifact verification: PASS"
+.venv/bin/python scripts/validate_paper.py
+if command -v latexmk >/dev/null 2>&1 && command -v pdflatex >/dev/null 2>&1 && command -v bibtex >/dev/null 2>&1; then
+  ./scripts/build_paper.sh
+  .venv/bin/python scripts/validate_paper.py --check-pdf
+else
+  echo "Local paper PDF build: PENDING (pdfLaTeX, BibTeX, or latexmk unavailable)"
+fi
+echo "Final submission readiness: PENDING (see paper/MANUAL_INPUTS_REQUIRED.md)"

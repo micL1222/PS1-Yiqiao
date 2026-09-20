@@ -27,3 +27,6 @@ env/
 *.swp
 *.swo
 *~
+
+# Local paper build
+paper/build/
