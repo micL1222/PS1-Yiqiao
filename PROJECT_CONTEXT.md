@@ -5,8 +5,8 @@
 - **Course:** COMSCI/ECON 206 Computational Microeconomics, Autumn 2026 Session 1.
 - **Project:** Revised PS1 v2 research proposal, developed individually.
 - **Working title:** Who Pays to Know? Strategic Information Acquisition Before AI Collective Decisions.
-- **Status:** Step 4 scholarly integration and local ACM LaTeX draft completed: verified formal model and sweep, isolated Gradio demo, vector cost-sweep figure, editable Draw.io teaser master, citation/claim audits, five-section paper and appendices, local PDF build, and project/paper validators. Final teaser export, author inputs, publication, and Overleaf final compilation remain pending. No behavioral or educational-outcome evaluation has been run.
-- **Authorship:** The author independently developed the research question and strategic model. AI assistance is limited to implementation, debugging, project organization, drafting assistance, reproducibility checks, and technical verification after that reasoning.
+- **Status:** Formal model, sweep, demo, approved Figure 1, author-confirmed field-trip metadata, five-section ACM paper, appendices, local PDF build, and validators are complete locally. GitHub publication is possible through a verified macOS Git credential, and the existing personal v1 repository has a free v2 branch name; Hugging Face publication is authentication blocked. Colab requires the actual public GitHub branch. Final Overleaf compilation and Human-Only/course-process work remain. No behavioral or educational-outcome evaluation has been run.
+- **Authorship:** The author supplied the original reassessment, strategic idea, model decisions, and interpretation. OpenAI Codex provided substantial implementation, debugging, artifact construction, drafting, source checking, and verification assistance. The author retains final responsibility.
 
 ## Motivation and formal baseline
 
@@ -43,16 +43,17 @@ The theoretical model, computational verification, executed notebook, generated 
 
 - **Completed Step 2:** Implement the formal game, independently check pure equilibria, verify NashPy baseline and c = 0 through 5 sweep, and execute the notebook.
 - **Completed Step 3:** Build the local Gradio prototype in `demo/`, generate a vector cost-sweep PDF and PNG from `outputs/cost_sweep.csv`, create the editable `figures/ps1_teaser.drawio` master, add demo tests and `scripts/validate_project.py`, and run `./scripts/verify_all.sh`. The workflow passed 14 original model tests, 10 demo logic tests, fresh notebook execution, and 16/16 validator checks. A localhost HTTP smoke test returned 200 and the server was stopped.
-- **Manual Step 3 follow-up:** No local Draw.io export mechanism was available. Open the master in diagrams.net, review its layout, and export `figures/ps1_teaser.pdf` as a vector PDF before using it in a paper.
-- **Completed Step 4 local draft:** Retrieved the official public course template, retained ACM class/BibTeX style, verified seven sources against primary or official pages, drafted exactly five main sections and Appendices A–E, compiled a local PDF, and checked that the main text ends on page 2 with an approximately full-size visible teaser placeholder. Human-only fields and final submission items are in paper/MANUAL_INPUTS_REQUIRED.md. The old v1 review was not accessed; it is not represented as feedback on v2. Second assigned peer review: not received.
+- **Resolved Figure 1 follow-up:** The author reviewed the Draw.io master and exported `figures/ps1_teaser.pdf` as a vector PDF. The real figure is integrated into the local paper, whose five main sections still end on page 2.
+- **Completed Step 4 local draft:** Retrieved the official public course template, retained ACM class/BibTeX style, verified seven sources against primary or official pages, and drafted exactly five main sections and Appendices A–E. No peer-review file was accessed or represented as direct feedback on v2.
+- **Step 5A/5B local context:** The author supplied verified individual identity and the reason for changing topics. Session B was recovered from the author's own v1 `main.tex`; title, role, and teammate names remain unverified and omitted from the paper. The author confirmed September 4 attendance at both field-trip sites and personally taking both copied photographs. No week3 file was changed. One accessible review concerns v1 only; another assigned review is inaccessible, and neither review's substantive file was accessed. Remaining Human-Only inputs are in `paper/MANUAL_INPUTS_REQUIRED.md`.
 
 The code uses [Research, Skip] action order. Boundary c = 0 and c = V cases are degenerate; direct enumeration lists all pure equilibria, while finite support enumeration does not establish a complete boundary mixed-equilibrium correspondence. The app has not been deployed, and educational effectiveness has not been evaluated.
 
-## Future stages — not begun
+## Remaining stages
 
-1. Author review and completion of Human-Only, identity, workshop, and field-trip inputs; manual vector teaser export.
-2. Publication of GitHub and Google Colab artifacts.
-3. Hugging Face deployment.
+1. Author review and completion of remaining Human-Only and workshop details, if required.
+2. Publish the verified repository to the unused v2 branch without force; then adapt and verify the notebook for that public branch and construct a real Colab URL.
+3. Authenticate Hugging Face and deploy the tested minimal Space package.
 4. Final Overleaf compilation, two-page visual check, source ZIP, and cross-artifact submission audit.
 
 ## Constraints for future work
@@ -61,4 +62,4 @@ The code uses [Research, Skip] action order. Boundary c = 0 and c = V cases are 
 - Do not edit Human-Only peer reviews.
 - Preserve reproducibility and keep paper, notebook, demo, and figures aligned to the same research model.
 - Do not modify old PS1 v1 materials unless explicitly instructed.
-- Paper drafting was explicitly authorized for Step 4; publication, deployment, and behavioral claims remain separate future work.
+- Publication and deployment were authorized for Step 5B when authenticated access is available. Do not invent URLs or observed behavior.

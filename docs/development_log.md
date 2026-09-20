@@ -31,7 +31,22 @@
 
 - The author's own reassessment of the earlier attention/interruption project led to the v2 costly-information game; the topic change is not attributed to peer review.
 - Re-ran the existing workflow before drafting: 14 model tests, 10 demo tests, six freshly executed notebook code cells, and 16/16 project checks passed.
-- Retrieved the official public PS1 Overleaf template into an ignored directory, retained its ACM class and BibTeX style, and drafted a five-section paper with Author Notes and Appendices A–E. The actual peer-review file was never accessed. The old v1 review is historical only; the second assigned peer review was not received.
+- Retrieved the official public PS1 Overleaf template into an ignored directory, retained its ACM class and BibTeX style, and drafted a five-section paper with Author Notes and Appendices A–E. No actual peer-review file was accessed. The accessible old-topic review is historical only; the other assigned review's status was later clarified as currently inaccessible to the author.
 - Verified seven narrow literature/official-source claims, created a paper argument map, citation and claim audits, and a submission-readiness ledger.
-- Built a local six-page ACM draft. Its five main sections end by page 2 with a visible approximately full-size teaser placeholder. The final vector teaser PDF, author identity, workshop and field-trip details, Human-Only response/reflection, public URLs, and Overleaf final compilation remain pending.
+- Built an initial six-page ACM draft whose five main sections ended by page 2. It used a visible teaser placeholder at that stage; the real vector teaser and author identity were integrated later. Workshop and field-trip confirmations, Human-Only response/reflection, public URLs, and final Overleaf compilation remain pending.
 - No AI or human behavioral experiment or educational effectiveness evaluation was conducted.
+
+## 2026-09-20 — Step 5A author context and field-trip recovery
+
+- Filled verified individual-author identity and recovered the earlier workshop's Session B designation from the author's own v1 main.tex. Role, teammate names, and Human-Only reflection remain for author confirmation.
+- Documented the author's own reason for changing from attention scheduling to a direct two-player Research/Skip game; neither peer review is credited with causing that decision. Corrected Appendix D to record one accessible old-topic review and one assigned review currently inaccessible to the author. No substantive peer-review file was accessed.
+- Copied the two author-owned v1 field-trip JPEGs unchanged into paper/field_trip/, recorded source-file names and hashes, and separated visible observations from interpretations. The author subsequently confirmed photographer, visit date, both sites, and attendance. No week3 file was modified.
+- Rebuilt the local paper with the approved vector teaser and both photographs. The five numbered main sections still end on page 2; final author review and Overleaf compilation remain pending.
+
+## 2026-09-20 — Step 5B verified local release preparation
+
+- Replaced unverified workshop title, role, and teammate placeholders in the rendered paper with factual Session B status; retained unresolved course details in `paper/MANUAL_INPUTS_REQUIRED.md`. Safely inspected author-owned v1 `main.tex`, README, and proposal title matches only. No peer-review or classmate file was opened.
+- Added author-confirmed September 4 attendance and photographer metadata for both field-trip images. Public provenance now uses repository-relative paths; no reuse license for the photos is asserted.
+- Polished the author's own topic-change reasoning and removed blank reviewer-response fields. Appendix D now states only the accessible v1-review and inaccessible assigned-review facts.
+- Rebuilt the seven-page local PDF, visually inspected the rendered pages, and verified the five main sections end on page 2. The 24 model/demo tests, fresh notebook execution, 16/16 research checks, 13/13 paper checks, seven citations, and claim audit passed.
+- GitHub CLI had no saved login, but the existing macOS Git credential authenticated to the GitHub API as `micL1222`. The personal `PS1-Yiqiao` repository had only a `main` branch, leaving `v2-information-acquisition` free. Hugging Face reported no login. No public URL was invented before publication.

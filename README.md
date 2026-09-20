@@ -6,7 +6,7 @@
 
 This repository is the clean v2 workspace for a revised COMSCI/ECON 206 PS1 research proposal.
 
-**Current status:** Formal baseline and cost sweep verified; local demo, computational figure, editable teaser, and a Step 4 Overleaf-ready source draft are built and locally checked. The paper compiles locally with the official course ACM template and a visible placeholder for the missing teaser PDF. Final submission inputs, public links, and Overleaf compilation remain pending. Behavioral questions and educational effectiveness remain untested.
+**Current status:** Formal baseline and cost sweep verified; local demo, computational figure, and author-approved teaser are built and checked. The individual-author paper compiles locally with the official course ACM template, Figure 1, and two author-confirmed field-trip photos; its five numbered main sections finish on page 2. GitHub publication is in progress through a verified Git credential; Hugging Face publication remains authentication blocked. The final Overleaf compile and human/course-process inputs remain. Behavioral questions and educational effectiveness remain untested.
 
 ## Research Question
 
@@ -65,7 +65,7 @@ The local [Gradio prototype](demo/README.md) has two tabs: **Play One Strategic 
 
 ## Editable Teaser
 
-`figures/ps1_teaser.drawio` is the editable Draw.io master. Its conceptual shapes and connectors passed XML structure checks. The caption draft and ACM accessibility description are in `figures/ps1_teaser_caption.md` and `figures/ps1_teaser_description.md`. A local Draw.io export mechanism was not available, so `figures/ps1_teaser.pdf` remains pending manual vector export from the master.
+`figures/ps1_teaser.drawio` is the author-approved editable Draw.io master. Its conceptual shapes and connectors passed XML structure checks. The caption draft and ACM accessibility description are in `figures/ps1_teaser_caption.md` and `figures/ps1_teaser_description.md`. The manually reviewed vector export is `figures/ps1_teaser.pdf`; the local paper build copies it into `paper/figures/` and includes it as Figure 1.
 
 ## Local Verification Workflow
 
@@ -73,17 +73,18 @@ From the project root, run `./scripts/verify_all.sh`. It runs the original model
 
 ## Step 4 Paper Draft
 
-The paper source is in paper/main.tex, with five numbered sections, verified literature, Author Notes, and Appendices A–E. paper/TEMPLATE_PROVENANCE.md records the official public course template and compiler. docs/literature_verified.md, docs/citation_audit.md, and docs/claim_audit.md document the basis and limits of its claims. Build locally with ./scripts/build_paper.sh; the draft PDF is generated in the ignored paper/build/ directory. paper/OVERLEAF_IMPORT_INSTRUCTIONS.md gives the later upload workflow. paper/MANUAL_INPUTS_REQUIRED.md identifies final-submission blockers. No peer-review file was accessed in Step 4; the old v1 review is described only as historical process evidence, and the second assigned review is recorded as not received.
+The paper source is in paper/main.tex, with five numbered sections, verified literature, Author Notes, and Appendices A–E. paper/TEMPLATE_PROVENANCE.md records the official public course template and compiler. docs/literature_verified.md, docs/citation_audit.md, and docs/claim_audit.md document the basis and limits of its claims. Build locally with ./scripts/build_paper.sh; the draft PDF is generated in the ignored paper/build/ directory. paper/OVERLEAF_IMPORT_INSTRUCTIONS.md gives the later upload workflow. paper/MANUAL_INPUTS_REQUIRED.md identifies final-submission blockers. No peer-review file was accessed: one accessible review concerns the old v1 topic, while another assigned review is currently inaccessible to the author. Neither is treated as direct evidence for v2.
 
 ## Publication and Evidence Status
 
-- Hugging Face deployment: pending.
-- Google Colab publication: pending.
-- GitHub remote: pending.
+- Hugging Face deployment: authentication unavailable; minimal staging package preparation is tracked in `deployment/huggingface/`.
+- Google Colab publication: pending an actual public GitHub branch and portable notebook bootstrap.
+- GitHub: the `micL1222` account was verified with an existing macOS Git credential; the personal PS1 repository has only its v1 `main` branch. A separate v2 branch will preserve it.
+- Reuse: No explicit reuse license has yet been granted; public availability should not be interpreted as additional reuse permission.
 - Behavioral experiment: not conducted.
 - Human experiment: not conducted.
 - Educational effectiveness: not evaluated.
 
 ## AI Assistance
 
-The research question and strategic model were independently developed by the author. AI tools may assist with implementation, debugging, organization, drafting, and verification. All substantive research claims, citations, computations, and final interpretations remain the responsibility of the author. See `AI_USE_LOG.md` for the assistance record.
+The initial research reassessment and strategic idea came from the author. OpenAI Codex substantially assisted with implementation, debugging, artifact development, drafting, source checking, and verification. All final claims and interpretations remain the author's responsibility. See `AI_USE_LOG.md` for the assistance record.

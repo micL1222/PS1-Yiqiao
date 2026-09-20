@@ -1,32 +1,24 @@
 # Submission readiness — 2026-09-20
 
-Research-artifact verification and final-submission readiness are separate. The local draft compiles, and its five main sections end by page 2 with an approximately full-size Figure 1 placeholder. The final two-page result must be rechecked with the actual vector teaser PDF in Overleaf.
+Research-artifact verification and final-submission readiness are separate. The local paper compiles with the approved Figure 1, author identity, author-confirmed field-trip images, and five numbered sections ending on page 2. This is a local candidate, not the authoritative Overleaf PDF.
 
-| Requirement | Status | Evidence/file | Blocking? | Action needed |
-| --- | --- | --- | --- | --- |
-| Compiled final PDF | Pending | Local draft at paper/build/PS1-v2-draft.pdf | Yes | Complete inputs, compile and inspect in Overleaf. |
-| Final Overleaf Source ZIP | Pending | paper/ source and import instructions | Yes | Download final source ZIP after Overleaf compile. |
-| Exactly five sections, two-page main | Local draft pass; final pending | paper/main.tex and local aux label main:end=page 2 | Yes | Recheck with real teaser and final PDF. |
-| Editable Draw.io master | Complete, author review pending | figures/ps1_teaser.drawio; paper/figures/ copy | Yes | Review and approve. |
-| Teaser vector PDF | Missing | figures/ps1_teaser.pdf | Yes | Manually export from reviewed master. |
-| References | Seven verified entries, author review pending | paper/references.bib; docs/literature_verified.md | Yes | Final citation check. |
-| Author Notes | Drafted with placeholders | paper/main.tex | Yes | Fill real names/contributions. |
-| Appendix A technical | Drafted from outputs | paper/appendices/appendix_a_technical.tex | No | Author verification. |
-| Appendix A.1 AI use | Drafted; human review pending | paper/appendices/appendix_a1_ai_use.tex | Yes | Review disclosure. |
-| Appendix B development | Objective record drafted; Human-Only fields pending | paper/appendices/appendix_b_development.tex | Yes | Author completes actual reflection/workshop details. |
-| Appendix C field trip | Placeholders only | paper/appendices/appendix_c_field_trip.tex | Yes | Verify attendance/photos/captions/observations. |
-| Appendix D review and revision | Historical structure drafted; response fields pending | paper/appendices/appendix_d_review_revision.tex | Yes | Author completes private-response fields if required. |
-| Appendix E abstract | Eight rows drafted | paper/appendices/appendix_e_structured_abstract.tex | No | Author review. |
-| GitHub publication | Not published | No remote | Yes | Publish and insert real URL/commit if course submission requires. |
-| Verified commit | Step 4 commit pending at time of this draft | Git status | Yes | Commit after final regression, then record hash. |
-| Google Colab | Not published | Local executed notebook | Yes | Publish runnable notebook, insert URL. |
-| Code snapshot | Not prepared for Canvas | Project repository | Yes | Export/download submission snapshot. |
-| Hugging Face | Not deployed | Local Gradio demo | Yes | Deploy, verify, insert URL. |
-| SDG 4 statement | Drafted, evaluation explicitly untested | Section 5; UN source | No | Author review. |
-| v1 preserved | Not inspected by Step 4 | Author's historical repository | Yes | Author confirms preservation for course portfolio. |
-| v1 peer review preserved | Not accessed by Step 4 | Author's private record | Yes | Author confirms preservation and responds manually if required. |
-| Second review | Not received | Appendix D exact record | No | Add substitute only if actually received. |
-| Author response | Human-Only pending | Appendix D.5 | Yes | Author completes where required. |
-| Final v2 submission | Pending | Entire portfolio | Yes | Finish all blocking items and submit through course channel. |
+| Requirement | Status | Evidence | Remaining action |
+| --- | --- | --- | --- |
+| Formal model, cost sweep, outputs, tests | COMPLETE | 24 model/demo tests, fresh six-cell notebook, 16/16 project checks | Preserve the verified snapshot. |
+| Paper source, citations, claim boundaries | COMPLETE LOCALLY | 13/13 paper checks; seven documented citations; claim audit | Final author read-through and Overleaf compile. |
+| Figure 1 and editable master | COMPLETE | Author-approved PDF and Draw.io source in root and paper-local figures | Inspect after Overleaf import. |
+| Author Notes | COMPLETE FOR VERIFIED FACTS | Name, NetID, email, individual contribution, instructor and workshop officials, Session B | Confirm any course-required role, teammate, or acknowledgement details. |
+| Field-trip photographs | COMPLETE FOR AUTHOR-CONFIRMED FACTS | Both unchanged photos; author confirms attendance, sites, September 4 date, and photographer | Author reviews captions; no reuse license is asserted. |
+| Appendix B and E | COMPLETE LOCALLY | Author-supplied topic-change reasoning, verified pure and mixed model development | Author read-through. |
+| Appendix D | COMPLETE FOR AVAILABLE FACTS | One accessible v1 review and another assigned review currently inaccessible; no substantive review content used | Human-Only response or instructor clarification if required. |
+| Human-Only workshop/reflection | COURSE/REVIEW STATUS UNAVAILABLE | No workshop comments or reflection invented | Author completes personally if required. |
+| Verified local Git commit/tag | COMPLETE AFTER FREEZE | `ps1-v2-verified` tag; use `git rev-parse` for full SHA | Preserve tag and report hash externally. |
+| GitHub publication | PUBLICATION IN PROGRESS | Existing macOS Git credential authenticated as `micL1222`; personal PS1 repo has only `main` | Push the verified snapshot to new `v2-information-acquisition` branch without force; verify. |
+| Google Colab URL | PENDING GITHUB | Public v2 GitHub notebook and branch do not yet exist | After GitHub publication, add actual branch bootstrap, fresh-run, and verify URL. |
+| Hugging Face Space | AUTH BLOCKED | `hf auth whoami` reported no login; local staging passed imports and HTTP 200 | Author runs `hf auth login`; then inspect/create public Space and deploy minimal package. |
+| Code snapshot and Overleaf source ZIP | COMPLETE LOCALLY AFTER PACKAGING | `submission/` archives are local and excluded from Git | Verify ZIPs and upload only the paper ZIP to Overleaf. |
+| Final Overleaf PDF and source | MANUAL OVERLEAF STEP REMAINING | Local candidate PDF only | Import paper source ZIP, compile with pdfLaTeX, inspect, download PDF and source. |
+| Canvas submission | MANUAL STEP REMAINING | No submission made | Submit authoritative files after final review. |
+| v1/review record preservation | COMPLETE LOCALLY | Week3 project inspected read-only; no review file opened | Author preserves private historical records. |
 
-The local draft and research artifacts are not a claim that the portfolio is ready for final submission.
+No public artifact URL is asserted until its destination is actually published and checked. No behavioral experiment or educational-effectiveness evaluation has been conducted. The project is not yet ready for final submission while the required public artifacts and manual course steps remain.

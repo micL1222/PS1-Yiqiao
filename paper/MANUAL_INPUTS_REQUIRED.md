@@ -1,22 +1,21 @@
 # Manual inputs and final-submission gates
 
+Author name, NetID, email, Session B, both field-trip sites, attendance, date, photographer, and the approved Figure 1 are recorded. The field-trip facts were confirmed by Yiqiao Liu (Mickey). Unverified workshop details are intentionally omitted from the rendered paper.
+
 ## BLOCKING FINAL SUBMISSION
 
-1. Review the editable figures/ps1_teaser.drawio master and its caption/description; export figures/ps1_teaser.pdf as a vector PDF, copy it into paper/figures/, and rebuild. Recheck the two-page main paper with the real figure.
-2. Replace [AUTHOR NAME], [EMAIL], and [NETID] with author-verified identity.
-3. Fill and verify workshop session/title, assigned role, two real teammate names, actual contributions, and class acknowledgement. Confirm whether Prof. Luyao Zhang and Prof. Ken Rogerson acknowledgements are accurate for the author's participation.
-4. Complete required Human-Only workshop/handwritten reflection content personally.
-5. Complete any required original v1 reviewer response and reviewer follow-up personally, based on the author's private record. Do not reinterpret that review as v2 feedback.
-6. Record exactly: **Second assigned peer review: not received.** If the instructor later provides substitute feedback, the author inserts and responds to it; none is invented.
-7. Confirm actual September 4 field-trip attendance and author ownership/source of the Tencent Shanghai Office and Shanghai Science and Technology Museum photographs. Add approved photos, dates, factual captions, actual observations, and provenance to Appendix C.
-8. Publish the GitHub repository, runnable Google Colab notebook, and Hugging Face educational demo only when the author chooses to do so; then replace the three [pending ...] labels with real verified project URLs. Record a submitted commit and downloadable code snapshot for the course portfolio.
-9. Human-review all mathematical claims, citations, AI disclosure, authorship/acknowledgements, and any reuse terms.
-10. Import the completed source ZIP into Overleaf, select main.tex and pdfLaTeX, compile, and visually check the final PDF and five-section two-page limit.
-11. Download the final Overleaf PDF and final Overleaf Source ZIP for submission. Confirm the historical v1 and its private review are preserved by the author; neither was accessed here.
+1. Confirm the earlier workshop title, the author's role, teammate names, specific contributions, and class acknowledgements if the course requires them. Session B is verified in the author's v1 `main.tex`; the title, role, and teammate names were not found in safely inspected author-owned non-review sources. Workshop teammates are not coauthors of this individual PS1.
+2. Complete any required Human-Only workshop or handwritten reflection personally.
+3. If required by the course, personally respond to the accessible review of the superseded v1 topic. A second assigned review is currently inaccessible; request access or instructor clarification if a response is required. No reviewer content was accessed or incorporated into v2.
+4. Human-review all mathematical claims, citations, AI disclosure, acknowledgements, field-trip descriptions, and the current reuse status.
+5. Authenticate Hugging Face CLI (`hf auth login`) if the public Space is required; it reported no login on 2026-09-20. GitHub access was available through a verified macOS Git credential, and the separate v2 branch is being prepared. Check actual public URLs and backfill the paper before final submission.
+6. Import the completed source ZIP into Overleaf, select `main.tex` and pdfLaTeX, compile, and inspect the final PDF, especially Figure 1 and the five-section two-page limit.
+7. Download the authoritative Overleaf PDF and source ZIP; submit through the course channel. Preserve the historical v1 project and private review records.
 
 ## NON-BLOCKING POLISH
 
-1. Refine prose and figure styling after author review while preserving the evidence boundaries.
-2. Add richer literature only after verifying each new claim against a primary source.
-3. Improve reproducibility by pinning dependencies after testing a locked environment; current tested versions are documented.
-4. Run a future belief-and-choice experiment only as a separate research stage; it is not part of the present draft.
+1. Decide whether to grant an explicit reuse license. No explicit license is currently granted; public availability should not be interpreted as additional reuse permission.
+2. Refine prose and figure styling after author review while preserving the evidence boundaries.
+3. Add richer literature only after checking each new claim against a primary source.
+4. Consider pinning dependencies after testing a locked environment; tested versions are documented.
+5. Run any future belief-and-choice experiment as a separate stage; no behavioral results are claimed here.

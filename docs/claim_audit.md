@@ -15,6 +15,7 @@ Evidence categories used in the paper: FORMAL/ANALYTICAL, COMPUTATIONALLY VERIFI
 | Humans free-ride in this setting. | NOT TESTED | The paper says no human behavioral data are reported. |
 | Bounded reasoning causes deviations in this setting. | PLANNED competing explanation, NOT TESTED | Future belief elicitation/manipulation and choice comparison are proposed. |
 | The demo improves learning or mechanisms improve institutions. | NOT TESTED | Future pre/post learning task and mechanism study only. |
-| One v1 review existed and second assigned review was not received. | AUTHOR-PROVIDED HISTORY; human confirmation required | Appendix D states this without reading review content or treating it as v2 feedback. |
+| One accessible review concerns the old v1 topic; another assigned review is currently inaccessible to the author. | AUTHOR-PROVIDED HISTORY; substantive review contents not accessed | Appendix D preserves the historical distinction without treating either review as direct v2 evidence. |
+| The recovered field-trip photos show technology displays, not evidence of strategic free-riding. | VISIBLE PHOTO CONTENT and AUTHOR-PROVIDED SITE ASSOCIATION | Appendix C separates direct visual observation from interpretation; photographer, capture date, and exact venue remain for author confirmation. |
 
 **Result:** No observed AI behavior, human behavior, or educational-effect claim appears in the paper. Final human verification of historical facts and prose remains pending.

@@ -68,15 +68,18 @@ def check_figure() -> None:
     require(r"\begin{teaserfigure}" in main and r"\label{fig:teaser}" in main, "Figure 1 missing")
     require(r"\ref{fig:teaser}" in read(PAPER / "sections/section1_questions.tex"), "Figure 1 reference missing")
     require(r"\Description{" in main and r"\caption{" in main, "Caption/Description missing")
-    require("Figure 1 vector PDF pending manual Draw.io export." in main, "Visible draft placeholder missing")
-    for rel in ("figures/ps1_teaser.drawio", "paper/figures/ps1_teaser.drawio", "paper/figures/cost_sweep_mixed_probability.pdf"):
+    require(r"\includegraphics[width=\textwidth]{figures/ps1_teaser.pdf}" in main, "Real Figure 1 include missing")
+    require("Figure 1 vector PDF pending manual Draw.io export." not in main, "Teaser placeholder remains")
+    for rel in ("figures/ps1_teaser.drawio", "figures/ps1_teaser.pdf", "paper/figures/ps1_teaser.drawio", "paper/figures/cost_sweep_mixed_probability.pdf"):
         require((ROOT / rel).is_file(), f"Figure artifact missing: {rel}")
 
 
 def check_metadata() -> None:
     main = read(MAIN)
-    for value in ("COMSCI/ECON 206", "Computational Microeconomics", "Autumn 2026 Session 1", "Luyao Zhang", "[AUTHOR NAME]", "[NETID]", "[EMAIL]"):
+    for value in ("COMSCI/ECON 206", "Computational Microeconomics", "Autumn 2026 Session 1", "Luyao Zhang", "Yiqiao Liu (Mickey)", "yl1081@duke.edu", "NetID:} yl1081", "Session B"):
         require(value in main, f"Metadata missing: {value}")
+    for placeholder in ("[AUTHOR NAME]", "[NETID]", "[EMAIL]", "[SESSION]"):
+        require(placeholder not in main, f"Resolved metadata placeholder remains: {placeholder}")
 
 
 def check_citations() -> None:
@@ -130,12 +133,17 @@ def check_appendices() -> None:
     for name in APPENDICES:
         if name != "appendix_a1_ai_use.tex":
             require(len(re.findall(r"\\section\{", read(PAPER / "appendices" / name))) == 1, f"Appendix section missing: {name}")
+    field = read(PAPER / "appendices/appendix_c_field_trip.tex")
+    for name in ("tencent_shanghai_office.jpg", "shanghai_science_technology_museum.jpg"):
+        require((PAPER / "field_trip" / name).is_file(), f"Field-trip photo missing: {name}")
+        require(name in field, f"Field-trip photo not included: {name}")
 
 
 def check_review() -> None:
     review = read(PAPER / "appendices/appendix_d_review_revision.tex")
-    for phrase in ("Second assigned peer review: not received.", "not treated as direct evaluation of the v2 model", "author's own research decision", "Historical v1 peer-review record", "Missing second review", "Reason for major revision", "Objective v1-to-v2 revision table", "Human-Only fields", "[AUTHOR TO COMPLETE MANUALLY IF REQUIRED]"):
+    for phrase in ("One accessible peer review concerns that earlier topic", "One assigned peer review is currently inaccessible to the author.", "Its substantive content has not been incorporated into this v2 revision.", "not treated as direct evaluation of the v2", "author's own research decision", "Review-process status", "Major revision decision", "Objective v1-to-v2 revision record", "Response status", "no substantive response to unavailable content is claimed"):
         require(phrase in review, f"Review boundary missing: {phrase}")
+    require("not received" not in review.lower(), "Unsupported peer-review status remains")
 
 
 def check_abstract() -> None:
@@ -158,11 +166,12 @@ def check_pdf() -> None:
     aux = PAPER / "build/PS1-v2-draft.aux"
     require(pdf.is_file() and pdf.stat().st_size > 10000, "Local draft PDF missing or small")
     require(pdf.read_bytes().startswith(b"%PDF-"), "Local draft is not PDF")
+    require((PAPER / "figures/ps1_teaser.pdf").read_bytes() == (ROOT / "figures/ps1_teaser.pdf").read_bytes(), "Compiled paper teaser differs from approved PDF")
     match = re.search(r"\\newlabel\{main:end\}\{\{5\}\{(\d+)\}", read(aux))
     require(match is not None and int(match.group(1)) <= 2, "Main text extends beyond page 2")
     log = read(PAPER / "build/PS1-v2-draft.log")
     require("undefined on input line" not in log and "undefined references" not in log, "Unresolved citation/reference")
-    newest = max(p.stat().st_mtime for p in [MAIN] + list((PAPER / "sections").glob("*.tex")) + list((PAPER / "appendices").glob("*.tex")))
+    newest = max(p.stat().st_mtime for p in [MAIN, ROOT / "figures/ps1_teaser.pdf"] + list((PAPER / "sections").glob("*.tex")) + list((PAPER / "appendices").glob("*.tex")))
     require(pdf.stat().st_mtime >= newest, "Draft PDF predates source")
     try:
         result = subprocess.run(["pdfinfo", str(pdf)], capture_output=True, text=True, check=True)

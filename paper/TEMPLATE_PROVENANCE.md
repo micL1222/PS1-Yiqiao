@@ -8,4 +8,4 @@
 - **Compiler:** pdfLaTeX, with BibTeX via latexmk. The course README specifies pdfLaTeX and main.tex as the main document.
 - **Excluded:** The course's illustrative proposal prose, sample figure, companion pilot, preview PDF, example bibliography, and URLs were not copied into this paper.
 
-This local draft compiles with a visibly labeled Figure 1 placeholder while the author's vector export is absent. The final source ZIP must include a manually reviewed paper/figures/ps1_teaser.pdf derived from the editable paper/figures/ps1_teaser.drawio.
+This local draft compiles with the author's manually reviewed vector Figure 1. The final source ZIP must include paper/figures/ps1_teaser.pdf and the matching editable paper/figures/ps1_teaser.drawio.

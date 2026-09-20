@@ -30,3 +30,5 @@ env/
 
 # Local paper build
 paper/build/
+paper/field_trip/PROVENANCE_LOCAL.md
+submission/
